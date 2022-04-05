@@ -38,9 +38,27 @@ export default function Home({ posts }) {
           <div>
             <h3 className='mb-6 font-bold text-2xl md:text-3xl text-black dark:text-white mb-1 tracking-tight decoration-4 dark:decoration-gray-400 decoration-gray-600 underline underline-offset-[6px]'>On the Web</h3>
             <ul>
-              <li><Link href='https://github.com/CatBoxy'><a className='flex flex-row h-8'><BsGithub/>@CatBoxy</a></Link></li>
-              <li><Link href='https://www.linkedin.com/in/jclambrechts/'><a><BsLinkedin/>@jclambrechts</a></Link></li>
-              <li><Link href='https://twitter.com/Esporadix1'><a><BsTwitter/>@Esporadix1</a></Link></li>
+              <li>
+                <Link href='https://github.com/CatBoxy'>
+                  <a className='flex flex-row p-6 h-8 items-center rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-all'>
+                    <BsGithub className="mr-4"/>@CatBoxy
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link href='https://www.linkedin.com/in/jclambrechts/'>
+                  <a className='flex flex-row p-6 h-8 items-center rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-all'>
+                    <BsLinkedin className="mr-4"/>@jclambrechts
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link href='https://twitter.com/Esporadix1'>
+                  <a className='flex flex-row p-6 h-8 items-center rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-all'>
+                    <BsTwitter className="mr-4"/>@Esporadix1
+                  </a>
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
