@@ -33,6 +33,24 @@ a {
   display: table;
 }
 
+/* .prose > :first-child {
+  /* Override removing top margin, causing layout shift */
+/* margin-top: 1.25em !important;
+  margin-bottom: 1.25em !important; */
+/* }  */
+
+.prose h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.prose p {
+  margin-bottom: 1rem;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 /**
  * MIT License
  * Copyright (c) 2021 Ayush Saini
