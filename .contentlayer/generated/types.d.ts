@@ -19,7 +19,6 @@ export type Post = {
   description: string
   category: string
   author: Author | undefined
-  image: string
   /** MDX file body */
   body: MDX
   readingTime: json

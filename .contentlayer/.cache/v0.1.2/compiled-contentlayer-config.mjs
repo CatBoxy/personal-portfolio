@@ -30,7 +30,7 @@ var Author = defineNestedType(() => ({
 }));
 var Post = defineDocumentType(() => ({
   name: "Post",
-  filePathPattern: "posts/*.mdx",
+  filePathPattern: "blog/*.mdx",
   contentType: "mdx",
   fields: {
     title: { type: "string", required: true },
@@ -40,8 +40,7 @@ var Post = defineDocumentType(() => ({
     author: {
       type: "nested",
       of: Author
-    },
-    image: { type: "string", required: true }
+    }
   },
   computedFields
 }));

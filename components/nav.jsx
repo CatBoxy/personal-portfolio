@@ -8,9 +8,9 @@ import Link from 'next/link';
 export const Nav = () => (
   <>
     <nav className="flex items-center justify-between w-full relative max-w-2xl mx-auto pt-8 pb-8 sm:pb-16 ">
-      <div>
+      <div className="ml-[-0.60rem]">
         <HiddenMenu/>
-        <NavItem href="/" text="Home"/>
+        <NavItem href="/" text="Home" className="pl-0"/>
         <NavItem href="/works" text="Works"/>
         <NavItem href="/blog" text="Blog"/>
       </div>
