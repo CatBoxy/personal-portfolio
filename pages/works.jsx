@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout } from '../components/Layout';
+import { Layout } from '../components/layout';
 import WorkItem from '../components/workItem';
 import botacuraImage from '../public/works/Botacura.jpg';
 import basementImage from '../public/works/basement1.png';

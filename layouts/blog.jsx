@@ -1,6 +1,6 @@
 import React from 'react';
-import { Layout } from '../components/Layout';
-import Date from '../components/Date';
+import { Layout } from '../components/layout';
+import Date from '../components/date';
 
 export default function BlogLayout({ children, post }) {
   return (
