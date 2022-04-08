@@ -1,12 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
-import Date from './Date';
 
 export default function BlogPost({
   title,
   slug,
   category,
-  publishedAt,
+  // publishedAt,
   readingTime,
   description,
 }) {

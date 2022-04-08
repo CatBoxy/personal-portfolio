@@ -10,9 +10,9 @@ export default function Post({ post }) {
 
   return (
     <BlogLayout post={post}>
-      {/* <Head>
+      <Head>
         <title>{post.title}</title>
-      </Head> */}
+      </Head>
       <MDXContent components={mdxComponents} />
 
     </BlogLayout>

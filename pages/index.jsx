@@ -32,8 +32,8 @@ export default function Home() {
             </h3>
             <p className='mb-6 text-justify text-gray-600 dark:text-gray-400 indent-8'>I am a full-stack developer based in San Juan, Argentina with a passion for building digital services and stuff I like.
               I love understanding each part of every project I work on, like planning, designing and launching apps.
-              When I'm not online I read, craft pottery and spend time with my family.
-              Currently I'm working on developing my dev skills and looking for a job.
+              When I&apos;aposm not online I read, craft pottery and spend time with my family.
+              Currently I&apos;m working on developing my dev skills and looking for a job.
             </p>
           </div>
           <div className="flex flex-col justify-center w-full items-center">
