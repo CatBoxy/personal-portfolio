@@ -1,14 +1,14 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 
 export default function ThemeButton() {
 
-  const [mounted, setMounted] = useState(false);
+  // const [mounted, setMounted] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
 
   // After mounting, I have access to the theme
-  useEffect(() => setMounted(true), []);
+  // useEffect(() => setMounted(true), []);
 
   return (
     <>
