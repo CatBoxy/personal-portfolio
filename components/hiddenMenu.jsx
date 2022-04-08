@@ -30,7 +30,7 @@ export default function HiddenMenu() {
             <div className="py-1">
               <Menu.Item>
                 {({ active }) => (
-                  <MyLink href="#">
+                  <MyLink href="/">
                     <a
                       className={cn(
                         active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
@@ -44,7 +44,7 @@ export default function HiddenMenu() {
               </Menu.Item>
               <Menu.Item>
                 {({ active }) => (
-                  <MyLink href="#">
+                  <MyLink href="/works">
                     <a
                       className={cn(
                         active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
@@ -58,7 +58,7 @@ export default function HiddenMenu() {
               </Menu.Item>
               <Menu.Item>
                 {({ active }) => (
-                  <MyLink href="#">
+                  <MyLink href="/blog">
                     <a
                       className={cn(
                         active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',

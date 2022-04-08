@@ -4,8 +4,6 @@ import Link from 'next/link';
 import { BsGithub, BsLinkedin, BsTwitter } from 'react-icons/bs';
 import { FaAngleRight } from 'react-icons/fa';
 
-import { allPosts } from 'contentlayer/generated';
-import { pick } from 'utils/pick';
 
 export default function Home() {
   return (
