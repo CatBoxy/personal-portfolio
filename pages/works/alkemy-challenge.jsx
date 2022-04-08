@@ -2,6 +2,7 @@ import React from 'react';
 import { Layout } from '../../components/Layout';
 import { BsGithub } from 'react-icons/bs';
 import Image from 'next/image';
+import alkemyImage from '../../public/works/Alkemy.jpg';
 
 export default function AlkemyChallenge() {
 
@@ -15,7 +16,7 @@ export default function AlkemyChallenge() {
                 Alkemy Challenge
               </h1>
               <p className="text-gray-600 dark:text-gray-400 mb-8">
-                Febrero 2022
+                Diciembre 2021
               </p>
             </div>
             <p className="text-justify mb-8 indent-8">
@@ -28,7 +29,7 @@ export default function AlkemyChallenge() {
               <span className='font-bold'>Importante:</span> Es necesario habilitar el contenido no seguro en el navegador para permitir la petición
               HTTP de la API de Alkemy.
             </p>
-            <ul className="mt-8 px-4 w-full">
+            <ul className="mt-8 mb-8 px-4 w-full">
               <li className="mb-2">
                 <div className="font-bold dark:bg-gray-600 bg-gray-200 inline-block px-1 rounded-sm mr-2">
                   <p className='text-sm'>PAGINA WEB</p>
@@ -63,9 +64,11 @@ export default function AlkemyChallenge() {
                 <a className="truncate" href="https://github.com/CatBoxy/Alkemy_ReactJS_Challenge">
                    https://github.com/CatBoxy/Alkemy_ReactJS_Challenge
                 </a>
-
               </li>
             </ul>
+            <div className='w-full flex flex-col items-center'>
+              <Image className="rounded-xl" src={alkemyImage} alt="Alkemy challenge"></Image>
+            </div>
           </div>
         </div>
       </Layout>

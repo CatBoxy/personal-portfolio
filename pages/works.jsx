@@ -24,7 +24,7 @@ export default function works() {
                 Una marketplace UI que almacena el carrito de compras en local storage. Creado con React.js, chakra-ui y vite.
               </WorkItem>
               <WorkItem image={alkemyImage} title={'Alkemy Challenge'} slug={'alkemy-challenge'}>
-                Una carta de opciones gastronómicas online y para armado de menu personal. Creado con React.js, Bootstrap y Styled-components.
+                Una carta de opciones gastronómicas online y armado de menu personal. Creado con React.js, Bootstrap y Styled-components.
               </WorkItem>
               <WorkItem image={botacuraImage} title={'Botacura - Digital House'} slug={'botacura'}>
                 App e-commerce de productos de escalada. Proyecto creado dentro del marco del curso Programación Web FullStack de Digital House.
