@@ -19,14 +19,14 @@ export default function AlkemyChallenge() {
                 Diciembre 2021
               </p>
             </div>
-            <p className="text-justify mb-8 indent-8">
+            <p className="text-justify mb-8 text-gray-600 dark:text-gray-400">
               Proyecto realizado para el Alkemy Challenge. Consiste en una carta de platos para el armado de un menú
               personalizado. Cada plato y menú final muestra diferentes atributos al usuario. La app posee un Login
               obligatorio para acceder al contenido, además la autenticación se realiza con una API provista por Alkemy.
               La app está integrada con la API de <a className='font-semibold' href='https://spoonacular.com/food-api'>Spoonacular.</a>
             </p>
-            <p className="text-justify">
-              <span className='font-bold'>Importante:</span> Es necesario habilitar el contenido no seguro en el navegador para permitir la petición
+            <p className="text-justify text-gray-600 dark:text-gray-400">
+              <span className='font-bold dark:text-white'>Importante:</span> Es necesario habilitar el contenido no seguro en el navegador para permitir la petición
               HTTP de la API de Alkemy.
             </p>
             <ul className="mt-8 mb-8 px-4 w-full">
@@ -34,7 +34,7 @@ export default function AlkemyChallenge() {
                 <div className="font-bold dark:bg-gray-600 bg-gray-200 inline-block px-1 rounded-sm mr-2">
                   <p className='text-sm'>PAGINA WEB</p>
                 </div>
-                <a href="https://alkemy-react-js-challenge.vercel.app/" target="_blank" rel="noreferrer">
+                <a href="https://alkemy-react-js-challenge.vercel.app/" target="_blank" rel="noreferrer" className='text-gray-600 dark:text-gray-400'>
                   https://alkemy-react-js-challenge.vercel.app/
                 </a>
               </li>
@@ -42,26 +42,26 @@ export default function AlkemyChallenge() {
                 <span className="font-bold dark:bg-gray-600 bg-gray-200 inline-block px-1 rounded-sm text-sm mr-2">
                   USUARIO
                 </span>
-                <p className="inline-block ">challenge@alkemy.org</p>
+                <p className="inline-block text-gray-600 dark:text-gray-400">challenge@alkemy.org</p>
               </li>
               <li className="mb-2">
                 <span className="font-bold dark:bg-gray-600 bg-gray-200 inline-block px-1 rounded-sm text-sm mr-2">
                   CONTRASEÑA
                 </span>
-                <p className="inline-block ">react</p>
+                <p className="inline-block text-gray-600 dark:text-gray-400">react</p>
               </li>
               <li className="mb-2">
                 <span className="font-bold dark:bg-gray-600 bg-gray-200 inline-block px-1 rounded-sm mr-2">
                   STACK
                 </span>
-                <p className="inline-block"> ReactJS, Vite, Bootstrap, Styled-components, React-router</p>
+                <p className="inline-block text-gray-600 dark:text-gray-400"> ReactJS, Vite, Bootstrap, Styled-components, React-router</p>
               </li>
               <li className="flex ">
 
                 <div className="font-bold dark:bg-gray-600 bg-gray-200 inline-block p-1 rounded-sm mr-2">
                   <BsGithub/>
                 </div>
-                <a className="truncate" href="https://github.com/CatBoxy/Alkemy_ReactJS_Challenge" target="_blank" rel="noreferrer">
+                <a className="truncate text-gray-600 dark:text-gray-400" href="https://github.com/CatBoxy/Alkemy_ReactJS_Challenge" target="_blank" rel="noreferrer">
                    https://github.com/CatBoxy/Alkemy_ReactJS_Challenge
                 </a>
               </li>

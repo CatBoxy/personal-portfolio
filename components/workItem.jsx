@@ -13,7 +13,7 @@ export default function WorkItem({ title, image, slug, children }) {
                 <Image src={image} alt="image" layout='responsive' className='rounded-2xl'/>
               </div>
               <h2 className='text-xl my-2'>{title}</h2>
-              <p className="text-center">{children}</p>
+              <p className="text-center text-gray-600 dark:text-gray-400">{children}</p>
             </div>
           </a>
         </Link>
