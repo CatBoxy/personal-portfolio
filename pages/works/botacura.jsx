@@ -33,7 +33,7 @@ export default function Botacura() {
                 <div className="font-bold dark:bg-gray-600 bg-gray-200 inline-block px-1 rounded-sm mr-2">
                   <p className='text-sm'>PAGINA WEB</p>
                 </div>
-                <a href="https://botacuradb.herokuapp.com/">
+                <a href="https://botacuradb.herokuapp.com/" target="_blank" rel="noreferrer">
                   https://botacuradb.herokuapp.com/
                 </a>
               </li>
@@ -48,13 +48,15 @@ export default function Botacura() {
                 <div className="font-bold dark:bg-gray-600 bg-gray-200 inline-block p-1 rounded-sm mr-2">
                   <BsGithub/>
                 </div>
-                <a className="truncate" href="https://github.com/CatBoxy/Botacura">
+                <a className="truncate" href="https://github.com/CatBoxy/Botacura" target="_blank" rel="noreferrer">
                    https://github.com/CatBoxy/Botacura
                 </a>
               </li>
             </ul>
             <div className='w-full flex flex-col items-center'>
-              <Image className="rounded-xl" src={botacuraImage} alt="Alkemy challenge"></Image>
+              <a href="https://botacuradb.herokuapp.com/" target="_blank" rel="noreferrer">
+                <Image className="rounded-xl" src={botacuraImage} alt="Alkemy challenge"></Image>
+              </a>
             </div>
           </div>
         </div>

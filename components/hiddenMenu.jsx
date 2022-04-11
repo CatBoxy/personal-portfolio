@@ -31,14 +31,14 @@ export default function HiddenMenu() {
               <Menu.Item>
                 {({ active }) => (
                   <MyLink href="/" active={active}>
-                    Home
+                    Inicio
                   </MyLink>
                 )}
               </Menu.Item>
               <Menu.Item>
                 {({ active }) => (
                   <MyLink href="/works" active={active}>
-                    Works
+                    Proyectos
                   </MyLink>
                 )}
               </Menu.Item>

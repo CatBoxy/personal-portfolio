@@ -34,7 +34,7 @@ export default function AlkemyChallenge() {
                 <div className="font-bold dark:bg-gray-600 bg-gray-200 inline-block px-1 rounded-sm mr-2">
                   <p className='text-sm'>PAGINA WEB</p>
                 </div>
-                <a href="https://alkemy-react-js-challenge.vercel.app/">
+                <a href="https://alkemy-react-js-challenge.vercel.app/" target="_blank" rel="noreferrer">
                   https://alkemy-react-js-challenge.vercel.app/
                 </a>
               </li>
@@ -61,13 +61,15 @@ export default function AlkemyChallenge() {
                 <div className="font-bold dark:bg-gray-600 bg-gray-200 inline-block p-1 rounded-sm mr-2">
                   <BsGithub/>
                 </div>
-                <a className="truncate" href="https://github.com/CatBoxy/Alkemy_ReactJS_Challenge">
+                <a className="truncate" href="https://github.com/CatBoxy/Alkemy_ReactJS_Challenge" target="_blank" rel="noreferrer">
                    https://github.com/CatBoxy/Alkemy_ReactJS_Challenge
                 </a>
               </li>
             </ul>
             <div className='w-full flex flex-col items-center'>
-              <Image className="rounded-xl" src={alkemyImage} alt="Alkemy challenge"></Image>
+              <a href="https://alkemy-react-js-challenge.vercel.app/" target="_blank" rel="noreferrer">
+                <Image className="rounded-xl" src={alkemyImage} alt="Alkemy challenge"></Image>
+              </a>
             </div>
           </div>
         </div>

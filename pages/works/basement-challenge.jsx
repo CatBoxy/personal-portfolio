@@ -28,7 +28,7 @@ export default function BasementChallenge() {
                 <div className="font-bold dark:bg-gray-600 bg-gray-200 inline-block px-1 rounded-sm mr-2">
                   <p className='text-sm'>PAGINA WEB</p>
                 </div>
-                <a href="https://basement-challenge-react.herokuapp.com/">
+                <a href="https://basement-challenge-react.herokuapp.com/" target="_blank" rel="noreferrer">
                   https://basement-challenge-react.herokuapp.com/
                 </a>
               </li>
@@ -43,13 +43,15 @@ export default function BasementChallenge() {
                 <div className="font-bold dark:bg-gray-600 bg-gray-200 inline-block p-1 rounded-sm mr-2">
                   <BsGithub/>
                 </div>
-                <a className="truncate" href="https://github.com/CatBoxy/basement_challenge_UI">
+                <a className="truncate" href="https://github.com/CatBoxy/basement_challenge_UI" target="_blank" rel="noreferrer">
                    https://github.com/CatBoxy/basement_challenge_UI
                 </a>
               </li>
             </ul>
             <div className='w-full flex flex-col items-center'>
-              <Image className="rounded-xl" src={basementImage} alt="Alkemy challenge"></Image>
+              <a href="https://basement-challenge-react.herokuapp.com/" target="_blank" rel="noreferrer">
+                <Image className="rounded-xl" src={basementImage} alt="Alkemy challenge"></Image>
+              </a>
             </div>
           </div>
         </div>

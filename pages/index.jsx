@@ -28,11 +28,11 @@ export default function Home() {
           </div>
           <div>
             <h3 className='mb-6 font-bold text-2xl md:text-3xl text-black dark:text-white mb-1 tracking-tight decoration-4 dark:decoration-gray-400 decoration-gray-600 underline underline-offset-[6px]'>
-              About Me
+              Sobre mi
             </h3>
-            <p className='mb-6 text-justify text-gray-600 dark:text-gray-400 indent-8'>I am a full-stack developer based in San Juan, Argentina with a passion for building digital services and stuff I like.
+            <p className='mb-6 text-justify text-gray-600 dark:text-gray-400 '>I am a full-stack developer based in San Juan, Argentina with a passion for building digital services and stuff I like.
               I love understanding each part of every project I work on, like planning, designing and launching apps.
-              When I&apos;aposm not online I read, craft pottery and spend time with my family.
+              When I&apos; not online I read, craft pottery and spend time with my family.
               Currently I&apos;m working on developing my dev skills and looking for a job.
             </p>
           </div>
@@ -40,25 +40,27 @@ export default function Home() {
             <Link href="/works" passHref>
               <button className="px-4 py-2 dark:bg-gray-600 bg-gray-200 rounded-lg hover:ring-2 ring-gray-300 transition-all">
                 <a className="flex flex-row items-center font-semibold">
-                  My Portfolio {<FaAngleRight className="ml-1"/>}
+                  Mi Portfolio {<FaAngleRight className="ml-1"/>}
                 </a>
               </button>
             </Link>
           </div>
           <div>
-            <h3 className='mb-6 font-bold text-2xl md:text-3xl text-black dark:text-white mb-1 tracking-tight decoration-4 dark:decoration-gray-400 decoration-gray-600 underline underline-offset-[6px]'> I love</h3>
-            <p className='mb-6 text-justify text-gray-600 dark:text-gray-400 indent-8'>
-              Reading, Music, Excercising, Blockchain, and my pet cat Limon &#128008;.
+            <h3 className='mb-6 font-bold text-2xl md:text-3xl text-black dark:text-white mb-1 tracking-tight decoration-4 dark:decoration-gray-400 decoration-gray-600 underline underline-offset-[6px]'>
+               Yo ♥
+            </h3>
+            <p className='mb-6 text-justify text-gray-600 dark:text-gray-400 '>
+              Leer, Musica, Entrenar, Blockchain y mi mascota Limon &#128008;.
             </p>
           </div>
           <div>
             <h3 className='mb-6 font-bold text-2xl md:text-3xl text-black dark:text-white mb-1 tracking-tight decoration-4 dark:decoration-gray-400 decoration-gray-600 underline underline-offset-[6px]'>
-              On the Web
+              En la Web
             </h3>
             <ul>
               <li>
                 <Link href='https://github.com/CatBoxy'>
-                  <a className='text-gray-600 dark:text-gray-400 flex flex-row p-6 h-8 items-center rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-all'>
+                  <a className='text-gray-600 dark:text-gray-400 flex flex-row ml-[-0.75rem] py-6 px-3 h-8 items-center rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-all' target="_blank">
                     <BsGithub className="mr-4"/>
                     @CatBoxy
                   </a>
@@ -66,7 +68,7 @@ export default function Home() {
               </li>
               <li>
                 <Link href='https://www.linkedin.com/in/jclambrechts/'>
-                  <a className='text-gray-600 dark:text-gray-400 flex flex-row p-6 h-8 items-center rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-all'>
+                  <a className='text-gray-600 dark:text-gray-400 flex flex-row ml-[-0.75rem] py-6 px-3 h-8 items-center rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-all' target="_blank">
                     <BsLinkedin className="mr-4"/>
                     @jclambrechts
                   </a>
@@ -74,7 +76,7 @@ export default function Home() {
               </li>
               <li>
                 <Link href='https://twitter.com/Esporadix1'>
-                  <a className='text-gray-600 dark:text-gray-400 flex flex-row p-6 h-8 items-center rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-all'>
+                  <a className='text-gray-600 dark:text-gray-400 flex flex-row ml-[-0.75rem] py-6 px-3 h-8 items-center rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-all' target="_blank">
                     <BsTwitter className="mr-4"/>
                     @Esporadix1
                   </a>
