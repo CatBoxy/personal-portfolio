@@ -19,7 +19,7 @@ export default function Home() {
                 Desarrollador Full-stack | Ingeniero
               </h2>
               <p className="text-gray-600 dark:text-gray-400 mb-16">
-                Building and learning web stuff that makes me happy.
+                Siempre aprendiendo y construyendo cosas nuevas.
               </p>
             </div>
             <div className="w-[80px] sm:w-[120px] relative mb-8 sm:mb-0 ">
