@@ -37,7 +37,6 @@ export default function Home() {
             </p>
           </div>
           <div className="flex flex-col justify-center w-full items-center">
-
             <Link href="/works" passHref>
               <button className="px-4 py-2 dark:bg-gray-600 bg-gray-200 rounded-lg hover:ring-2 ring-gray-300 transition-all">
                 <a className="flex flex-row items-center font-semibold">
@@ -45,7 +44,6 @@ export default function Home() {
                 </a>
               </button>
             </Link>
-
           </div>
           <div>
             <h3 className='mb-6 font-bold text-2xl md:text-3xl text-black dark:text-white mb-1 tracking-tight decoration-4 dark:decoration-gray-400 decoration-gray-600 underline underline-offset-[6px]'> I love</h3>

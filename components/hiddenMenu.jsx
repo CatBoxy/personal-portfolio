@@ -10,7 +10,7 @@ export default function HiddenMenu() {
 
   return (
     <>
-      <Menu as="div" className="relative inline-block text-left">
+      <Menu as="div" className="relative inline-block text-left z-10">
         <div>
           <Menu.Button className="visible md:hidden border-0 bg-transparent w-[40px] h-[40px] relative ">
             <BurgerIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
@@ -30,43 +30,22 @@ export default function HiddenMenu() {
             <div className="py-1">
               <Menu.Item>
                 {({ active }) => (
-                  <MyLink href="/">
-                    <a
-                      className={cn(
-                        active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                        'text-gray-800 dark:text-gray-200 block px-4 py-2 text-sm'
-                      )}
-                    >
+                  <MyLink href="/" active={active}>
                     Home
-                    </a>
                   </MyLink>
                 )}
               </Menu.Item>
               <Menu.Item>
                 {({ active }) => (
-                  <MyLink href="/works">
-                    <a
-                      className={cn(
-                        active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                        'text-gray-800 dark:text-gray-200 block px-4 py-2 text-sm'
-                      )}
-                    >
+                  <MyLink href="/works" active={active}>
                     Works
-                    </a>
                   </MyLink>
                 )}
               </Menu.Item>
               <Menu.Item>
                 {({ active }) => (
-                  <MyLink href="/blog">
-                    <a
-                      className={cn(
-                        active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                        'text-gray-800 dark:text-gray-200 block px-4 py-2 text-sm'
-                      )}
-                    >
+                  <MyLink href="/blog" active={active}>
                     Blog
-                    </a>
                   </MyLink>
                 )}
               </Menu.Item>
@@ -99,10 +78,15 @@ export default function HiddenMenu() {
 // Integration of headlessui + nextjs Link component
 
 function MyLink(props) {
-  const { href, children, ...rest } = props;
+  const { href, children, active, ...rest } = props;
   return (
-    <Link href={href}>
-      <a {...rest}>{children}</a>
+    <Link href={href} passHref>
+      <button className='flex flex-col w-full'>
+        <a className={cn(
+          active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+          'text-gray-800 dark:text-gray-200 block px-4 py-2 text-sm'
+        )} {...rest}>{children}</a>
+      </button>
     </Link>
   );
 }
