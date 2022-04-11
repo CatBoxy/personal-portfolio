@@ -13,10 +13,10 @@ export default function works() {
           <div className="flex flex-col items-start w-full justify-between">
             <div className="flex flex-col pr-8">
               <h1 className='font-bold text-3xl md:text-5xl text-black dark:text-white mb-1 tracking-tight'>
-                Works
+                Proyectos
               </h1>
               <p className="text-gray-600 dark:text-gray-400 mb-16">
-                Feel free to browse through my projects.
+                En este espacio comparto mis proyectos.
               </p>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4 w-full'>

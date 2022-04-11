@@ -16,7 +16,7 @@ export default function Home() {
                 Juan Lambrechts
               </h1>
               <h2 className="text-gray-700 dark:text-gray-200 mb-4">
-                Full-stack Developer
+                Desarrollador Full-stack | Ingeniero
               </h2>
               <p className="text-gray-600 dark:text-gray-400 mb-16">
                 Building and learning web stuff that makes me happy.
@@ -30,10 +30,11 @@ export default function Home() {
             <h3 className='mb-6 font-bold text-2xl md:text-3xl text-black dark:text-white mb-1 tracking-tight decoration-4 dark:decoration-gray-400 decoration-gray-600 underline underline-offset-[6px]'>
               Sobre mi
             </h3>
-            <p className='mb-6 text-justify text-gray-600 dark:text-gray-400 '>I am a full-stack developer based in San Juan, Argentina with a passion for building digital services and stuff I like.
-              I love understanding each part of every project I work on, like planning, designing and launching apps.
-              When I&apos; not online I read, craft pottery and spend time with my family.
-              Currently I&apos;m working on developing my dev skills and looking for a job.
+            <p className='mb-6 text-justify text-gray-600 dark:text-gray-400 '>
+              Soy un desarrollador Full-stack orientado al Frontend. Vivo en San Juan, Argentina y me apasiona elaborar soluciones y servicios digitales.
+              Amo entender cada parte de todo proyecto en el que me enfoco, como planeamiento, diseño, desarrollo y deploy.
+              Cuando no estoy conectado me gusta leer, el arte y pasar tiempo con mi familia y amigos.
+              En este momento me encuentro trabajando en mejorar mis habilidades y activamente buscando nuevos proyectos.
             </p>
           </div>
           <div className="flex flex-col justify-center w-full items-center">
