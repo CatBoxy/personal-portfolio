@@ -3,6 +3,7 @@ import { Layout } from '../components/layout';
 import { allPosts } from 'contentlayer/generated';
 import { pick } from 'utils/pick';
 import BlogPost from '../components/blogPost';
+import Section from '../components/section';
 
 
 export default function blog({ posts }) {
@@ -30,15 +31,17 @@ export default function blog({ posts }) {
                   category,
                   description,
                 }) => (
-                  <BlogPost key={slug}
-                    slug={slug}
-                    title={title}
-                    readingTime={readingTime}
-                    publishedAt={publishedAt}
-                    author={author}
-                    category={category}
-                    description={description}
-                  />
+                  <Section key={slug}>
+                    <BlogPost
+                      slug={slug}
+                      title={title}
+                      readingTime={readingTime}
+                      publishedAt={publishedAt}
+                      author={author}
+                      category={category}
+                      description={description}
+                    />
+                  </Section>
                 )
               )}
             </div>

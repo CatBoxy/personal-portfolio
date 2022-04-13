@@ -1,6 +1,7 @@
 import '../styles/globals.css';
 import Head from 'next/head';
 import { ThemeProvider } from 'next-themes';
+import { AnimatePresence } from 'framer-motion';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -9,7 +10,9 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <ThemeProvider attribute="class">
-        <Component {...pageProps} />
+        <AnimatePresence exitBeforeEnter initial={true}>
+          <Component {...pageProps} />
+        </AnimatePresence>
       </ThemeProvider>
     </>
   );
