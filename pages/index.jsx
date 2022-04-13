@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { BsGithub, BsLinkedin, BsTwitter } from 'react-icons/bs';
 import { FaAngleRight } from 'react-icons/fa';
 import Section from '../components/section';
+import avatar from '../public/foto.jpg';
 
 
 export default function Home() {
@@ -23,8 +24,8 @@ export default function Home() {
                 Desarrollando y aprendiendo cosas nuevas.
               </p>
             </div>
-            <div className="w-[80px] sm:w-[120px] relative mb-8 sm:mb-0 ">
-              <Image src="/MainAvatar.jpg" alt='Juan Lambrechts' height={176} width={176} className="rounded-full bg-white -z-50"/>
+            <div className="w-[120px] h-[120px] sm:w-[120px] relative mb-8 sm:mb-0 ">
+              <Image src={avatar} alt='Juan Lambrechts' layout='fill' objectFit='cover' className="rounded-full -z-50"/>
             </div>
           </div>
           <Section delay={0.1}>
