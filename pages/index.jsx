@@ -35,8 +35,8 @@ export default function Home() {
             <p className='mb-6 text-justify text-gray-600 dark:text-gray-400 '>
               Soy un desarrollador Full-stack orientado al Frontend. Vivo en San Juan, Argentina y me apasiona elaborar soluciones y servicios digitales.
               Amo entender cada parte de todo proyecto en el que me enfoco, como planeamiento, diseño, desarrollo y deploy.
-              Cuando no estoy conectado me gusta leer, el arte y pasar tiempo con mi familia y amigos.
-              En este momento me encuentro trabajando en mejorar mis habilidades y activamente buscando nuevos proyectos.
+              Cuando no estoy conectado me gusta leer, el arte y pasar tiempo con mi familia.
+              En este momento me encuentro trabajando en mejorar mis habilidades y buscando activamente nuevos proyectos.
             </p>
             <div className="flex flex-col justify-center w-full items-center">
               <Link href="/works" passHref>

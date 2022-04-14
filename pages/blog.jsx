@@ -17,7 +17,8 @@ export default function blog({ posts }) {
                 Blog
               </h1>
               <p className="text-gray-600 dark:text-gray-400 mb-16">
-                Bienvenido/a a mi pequeño rincon de la web.
+                Bienvenido/a a mi pequeño rincon de la web. En este espacio estaré compartiendo mis aprendizajes, experiencias y cosas interesantes
+                que encuentro.
               </p>
             </div>
             <div className='flex flex-col w-full'>
