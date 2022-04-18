@@ -21,7 +21,7 @@ export default function Home() {
                 Desarrollador Full-stack | Ingeniero
               </h2>
               <p className="text-gray-600 dark:text-gray-400 mb-16">
-                Desarrollando y aprendiendo cosas nuevas.
+                Creando y aprendiendo cosas nuevas.
               </p>
             </div>
             <div className="w-[120px] h-[120px] sm:w-[120px] relative mb-8 sm:mb-0 ">

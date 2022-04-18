@@ -22,7 +22,7 @@ export default function blog({ posts }) {
               </p>
             </div>
             <div className='flex flex-col w-full'>
-              {posts.map(
+              {/* {posts.map(
                 ({
                   slug,
                   publishedAt,
@@ -44,7 +44,15 @@ export default function blog({ posts }) {
                     />
                   </Section>
                 )
-              )}
+              )} */}
+              <Section className="w-full mb-8">
+                <div className="flex flex-col justify-between md:flex-row">
+                  <h4 className="w-full mb-2 text-lg font-medium text-gray-900 md:text-xl dark:text-gray-100">
+                    Work In Progress
+                  </h4>
+                </div>
+                <p className="text-gray-600 dark:text-gray-400"> Todavia no existen posts en esta seccion</p>
+              </Section>
             </div>
           </div>
         </div>
