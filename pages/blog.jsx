@@ -2,11 +2,11 @@ import React from 'react';
 import { Layout } from '../components/layout';
 import { allPosts } from 'contentlayer/generated';
 import { pick } from 'utils/pick';
-import BlogPost from '../components/blogPost';
+// import BlogPost from '../components/blogPost';
 import Section from '../components/section';
 
 
-export default function blog({ posts }) {
+export default function blog() {
   return (
     <>
       <Layout>
