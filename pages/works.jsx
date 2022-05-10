@@ -5,6 +5,7 @@ import WorkItem from '../components/workItem';
 import botacuraImage from '../public/works/Botacura.jpg';
 import basementImage from '../public/works/basement1.png';
 import alkemyImage from '../public/works/Alkemy.jpg';
+import denverSanJuan from '../public/works/DenverSanJuan.jpg';
 
 export default function works() {
   return (
@@ -21,6 +22,11 @@ export default function works() {
               </p>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4 w-full'>
+              <Section>
+                <WorkItem image={denverSanJuan} title={'Denver San Juan'} slug={'denver-sanjuan'}>
+                Pequeño proyecto freelance para cliente local. Permite al cliente loguearse y actualizar datos.
+                </WorkItem>
+              </Section>
               <Section>
                 <WorkItem image={basementImage} title={'Basement Challenge'} slug={'basement-challenge'}>
                 Una marketplace UI que almacena el carrito de compras en local storage. Creado con React.js, chakra-ui y vite.
