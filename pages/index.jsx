@@ -18,7 +18,7 @@ export default function Home() {
                 Juan Lambrechts
               </h1>
               <h2 className="text-gray-700 dark:text-gray-200 mb-4">
-                Desarrollador Full-stack | Ingeniero
+                Desarrollador Full-stack | Ingeniero en Materiales
               </h2>
               <p className="text-gray-600 dark:text-gray-400 mb-16">
                 Creando y aprendiendo cosas nuevas.
