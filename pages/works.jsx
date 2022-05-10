@@ -24,7 +24,7 @@ export default function works() {
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4 w-full'>
               <Section>
                 <WorkItem image={denverSanJuan} title={'Denver San Juan'} slug={'denver-sanjuan'}>
-                Pequeño proyecto freelance para cliente local. Permite al cliente loguearse y actualizar datos.
+                Proyecto freelance para cliente local. Permite al cliente loguearse y actualizar datos.
                 </WorkItem>
               </Section>
               <Section>
