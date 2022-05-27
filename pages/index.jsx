@@ -39,7 +39,7 @@ export default function Home() {
               Cuando no estoy conectado me gusta leer, el arte y pasar tiempo con mi familia.
               En este momento me encuentro trabajando en mejorar mis habilidades y buscando activamente nuevos proyectos.
             </p>
-            <div className="flex flex-row justify-evenly w-full items-center">
+            <div className="flex flex-row justify-evenly w-full items-center mb-6 sm:mb-0">
               <Link href="/works" passHref>
                 <button className="px-4 py-2 dark:bg-gray-600 bg-gray-200 rounded-lg hover:ring-2 ring-gray-300 transition-all">
                   <a className="flex flex-row items-center font-semibold">
