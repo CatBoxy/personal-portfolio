@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { BsGithub, BsLinkedin, BsTwitter } from 'react-icons/bs';
 import { FaAngleRight } from 'react-icons/fa';
+import { HiDownload } from 'react-icons/hi';
 import Section from '../components/section';
 import avatar from '../public/foto.jpg';
 
@@ -38,7 +39,7 @@ export default function Home() {
               Cuando no estoy conectado me gusta leer, el arte y pasar tiempo con mi familia.
               En este momento me encuentro trabajando en mejorar mis habilidades y buscando activamente nuevos proyectos.
             </p>
-            <div className="flex flex-col justify-center w-full items-center">
+            <div className="flex flex-row justify-evenly w-full items-center">
               <Link href="/works" passHref>
                 <button className="px-4 py-2 dark:bg-gray-600 bg-gray-200 rounded-lg hover:ring-2 ring-gray-300 transition-all">
                   <a className="flex flex-row items-center font-semibold">
@@ -46,6 +47,11 @@ export default function Home() {
                   </a>
                 </button>
               </Link>
+              <a target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1nc_qBTXaZA9PXZfmo12uXn90n1g2qP3M/view?usp=sharing" >
+                <button className="flex items-center font-semibold px-4 py-2 dark:bg-gray-600 bg-gray-200 rounded-lg hover:ring-2 ring-gray-300 transition-all">
+                  <p>Mi CV</p> {<HiDownload className="ml-1"/>}
+                </button>
+              </a>
             </div>
           </Section>
           <Section delay={0.2}>
