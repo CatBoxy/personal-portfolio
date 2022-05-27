@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { BsGithub, BsLinkedin, BsTwitter } from 'react-icons/bs';
 import { FaAngleRight } from 'react-icons/fa';
-import { HiDownload } from 'react-icons/hi';
+import { HiDownload, HiMail } from 'react-icons/hi';
 import Section from '../components/section';
 import avatar from '../public/foto.jpg';
 
@@ -19,7 +19,7 @@ export default function Home() {
                 Juan Lambrechts
               </h1>
               <h2 className="text-gray-700 dark:text-gray-200 mb-4">
-                Desarrollador Full-stack | Ingeniero en Materiales
+                Desarrollador Full-Stack | Ingeniero en Materiales
               </h2>
               <p className="text-gray-600 dark:text-gray-400 mb-16">
                 Creando y aprendiendo cosas nuevas.
@@ -66,7 +66,7 @@ export default function Home() {
             <h3 className='mb-6 font-bold text-2xl md:text-3xl text-black dark:text-white mb-1 tracking-tight decoration-4 dark:decoration-gray-400 decoration-gray-600 underline underline-offset-[6px]'>
               En la Web
             </h3>
-            <ul>
+            <ul className='flex flex-col items-start'>
               <li>
                 <Link href='https://github.com/CatBoxy'>
                   <a className='text-gray-600 dark:text-gray-400 flex flex-row ml-[-0.75rem] py-6 px-3 h-8 items-center rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-all' target="_blank">
@@ -90,6 +90,12 @@ export default function Home() {
                     @Esporadix1
                   </a>
                 </Link>
+              </li>
+              <li>
+                <div className='text-gray-600 dark:text-gray-400 flex flex-row ml-[-0.75rem] py-6 px-3 h-8 items-center rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-all' target="_blank">
+                  <HiMail className="mr-4"/>
+                    juancruzlambrechts@gmail.com
+                </div>
               </li>
             </ul>
           </Section>
