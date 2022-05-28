@@ -27,7 +27,7 @@ export default function AlkemyChallenge() {
             <ul className="mt-8 mb-8 px-4 w-full">
               <li className="mb-2">
                 <div className="font-bold dark:bg-gray-600 bg-gray-200 inline-block px-1 rounded-sm mr-2">
-                  <p className='text-sm'>PAGINA WEB</p>
+                  <p>PAGINA WEB</p>
                 </div>
                 <a href="https://denversanjuan.com/" target="_blank" rel="noreferrer" className='text-gray-600 dark:text-gray-400'>
                   https://denversanjuan.com/

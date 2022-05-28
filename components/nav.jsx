@@ -15,13 +15,11 @@ export const Nav = () => (
         <NavItem href="/blog" text="Blog"/>
       </div>
       <div className="flex flex-row items-center">
-        <button className="mr-6 w-9 h-9 dark:bg-gray-600 bg-gray-200 rounded-lg flex items-center justify-center hover:ring-2 ring-gray-300 transition-all">
-          <Link href="https://github.com/CatBoxy/personal-portfolio">
-            <a target="_blank">
-              <BsGithub/>
-            </a>
-          </Link>
-        </button>
+        <a href="https://github.com/CatBoxy/personal-portfolio" target="_blank" rel="noreferrer">
+          <button className="mr-6 w-9 h-9 dark:bg-gray-600 bg-gray-200 rounded-lg flex items-center justify-center hover:ring-2 ring-gray-300 transition-all">
+            <BsGithub/>
+          </button>
+        </a>
         <ThemeButton/>
       </div>
     </nav>
