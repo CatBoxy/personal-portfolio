@@ -32,20 +32,20 @@ export default function AlkemyChallenge() {
             <ul className="mt-8 mb-8 px-4 w-full">
               <li className="mb-2">
                 <div className="font-bold dark:bg-gray-600 bg-gray-200 inline-block px-1 rounded-sm mr-2">
-                  <p className='text-sm'>PAGINA WEB</p>
+                  <p>PAGINA WEB</p>
                 </div>
                 <a href="https://alkemy-react-js-challenge.vercel.app/" target="_blank" rel="noreferrer" className='text-gray-600 dark:text-gray-400'>
                   https://alkemy-react-js-challenge.vercel.app/
                 </a>
               </li>
               <li className="mb-2">
-                <span className="font-bold dark:bg-gray-600 bg-gray-200 inline-block px-1 rounded-sm text-sm mr-2">
+                <span className="font-bold dark:bg-gray-600 bg-gray-200 inline-block px-1 rounded-sm mr-2">
                   USUARIO
                 </span>
                 <p className="inline-block text-gray-600 dark:text-gray-400">challenge@alkemy.org</p>
               </li>
               <li className="mb-2">
-                <span className="font-bold dark:bg-gray-600 bg-gray-200 inline-block px-1 rounded-sm text-sm mr-2">
+                <span className="font-bold dark:bg-gray-600 bg-gray-200 inline-block px-1 rounded-sm mr-2">
                   CONTRASEÑA
                 </span>
                 <p className="inline-block text-gray-600 dark:text-gray-400">react</p>
