@@ -3,7 +3,6 @@ import HiddenMenu from './hiddenMenu';
 import NavItem from './navItem';
 import ThemeButton from './themeButton';
 import { BsGithub } from 'react-icons/bs';
-import Link from 'next/link';
 
 export const Nav = () => (
   <>
