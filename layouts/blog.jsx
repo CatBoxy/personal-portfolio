@@ -13,12 +13,12 @@ export default function BlogLayout({ children, post }) {
           <div className="flex flex-col items-start justify-between w-full mt-2 mb-2 md:flex-row md:items-center">
             <div className="flex items-center ">
               <p className=" text-sm text-gray-600 dark:text-gray-400">
-                {'Author | '}
+                {`${post.author.name} | `}
                 <Date dateString={post.publishedAt} />
               </p>
             </div>
             <p className=" text-sm text-gray-600 dark:text-gray-400 min-w-32 md:mt-0">
-              {post.readingTime.text}
+              {`${Math.round(post.readingTime.minutes)} min de lectura`}
             </p>
           </div>
           <div className="w-full mt-4 prose dark:prose-dark max-w-none">

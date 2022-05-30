@@ -1,5 +1,5 @@
 export const convertTime = (time) =>
-  new Date(time).toLocaleDateString('en-us', {
+  new Date(Date(time)).toLocaleDateString('es-AR', {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
