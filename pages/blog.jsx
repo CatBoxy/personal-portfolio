@@ -2,11 +2,11 @@ import React from 'react';
 import { Layout } from '../components/layout';
 import { allPosts } from 'contentlayer/generated';
 import { pick } from 'utils/pick';
-// import BlogPost from '../components/blogPost';
+import BlogPost from '../components/blogPost';
 import Section from '../components/section';
 
 
-export default function blog() {
+export default function blog({ posts }) {
   return (
     <>
       <Layout>
@@ -17,12 +17,12 @@ export default function blog() {
                 Blog
               </h1>
               <p className="text-gray-600 dark:text-gray-400 mb-16">
-                Bienvenido/a a mi pequeño rincon de la web. En este espacio estaré compartiendo mis aprendizajes, experiencias y cosas interesantes
+                Bienvenido/a a mi blog. En este espacio comparto aprendizajes, experiencias y cosas interesantes
                 que encuentro.
               </p>
             </div>
             <div className='flex flex-col w-full'>
-              {/* {posts.map(
+              {posts.map(
                 ({
                   slug,
                   publishedAt,
@@ -44,15 +44,7 @@ export default function blog() {
                     />
                   </Section>
                 )
-              )} */}
-              <Section className="w-full mb-8">
-                <div className="flex flex-col justify-between md:flex-row">
-                  <h4 className="w-full mb-2 text-lg font-medium text-gray-900 md:text-xl dark:text-gray-100">
-                    Work In Progress
-                  </h4>
-                </div>
-                <p className="text-gray-600 dark:text-gray-400"> Todavia no existen posts en esta seccion</p>
-              </Section>
+              )}
             </div>
           </div>
         </div>

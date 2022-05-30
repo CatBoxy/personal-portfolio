@@ -14,7 +14,6 @@ export default function Post({ post }) {
         <title>{post.title}</title>
       </Head>
       <MDXContent components={mdxComponents} />
-
     </BlogLayout>
   );
 }
