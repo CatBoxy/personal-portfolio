@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:url" content="https://personal-portfolio-catboxy.vercel.app/" />
         <meta name="author" content="Juan Cruz Lambrechts"></meta>
         <meta name="image" property="og:image" content="https://personal-portfolio-catboxy.vercel.app/linkedInThumbnail.jpg"></meta>
-        <meta property="article:published_time" content="2022-04-08" />
+        <meta name="publish_date" property="og:publish_date" content="2022-04-08T00:00:00-0600"></meta>
         <title>Juan Cruz Lambrechts</title>
       </Head>
       <ThemeProvider attribute="class">
