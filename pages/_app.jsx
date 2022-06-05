@@ -9,9 +9,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="og:title" content="Juan Cruz Lambrechts" />
-        <meta 
-          property="og:description"
-          content="FullStack web developer. I build my projects with React.js, Node.js, Styled-components, Redux, MySQL. Loving the craft." />
+        <meta property="og:description" content="FullStack web developer. I build my projects with React.js, Node.js, Styled-components, Redux, MySQL. Loving the craft." />
         <meta property="og:type" content="Website" />
         <meta property="og:url" content="https://personal-portfolio-catboxy.vercel.app/" />
         <meta name="author" content="Juan Cruz Lambrechts"></meta>
