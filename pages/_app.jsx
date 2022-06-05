@@ -14,6 +14,7 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:url" content="https://personal-portfolio-catboxy.vercel.app/" />
         <meta name="author" content="Juan Cruz Lambrechts"></meta>
         <meta name="image" property="og:image" content="personal-portfolio-catboxy.vercel.app/linkedInThumbnail.jpg"></meta>
+        <title>Juan Cruz Lambrechts</title>
       </Head>
       <ThemeProvider attribute="class">
         <AnimatePresence exitBeforeEnter initial={true}>
