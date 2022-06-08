@@ -135,7 +135,6 @@ Resources and projects I found useful when building this website.
 * [craftzdog](https://github.com/craftzdog/craftzdog-homepage)
 * [Readme template](https://github.com/othneildrew/Best-README-Template)
 * [nextjs+mdx](https://github.com/hunterbecton/next-js-mdx)
-* [Img Shields](https://shields.io)
 * [React Icons](https://react-icons.github.io/react-icons/search)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
