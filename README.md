@@ -33,7 +33,6 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -45,13 +44,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<table>
-  <tr>
-    <td>
-      This is the website I built to showcase every project I get my hands on, and my personal blog where I document my learning and thoughts.
-    </td>
-  </tr>
-</table>
+This is the website I built to showcase every project I get my hands on, and my personal blog where I document my learning and thoughts.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
