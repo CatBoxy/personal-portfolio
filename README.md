@@ -116,9 +116,11 @@ yarn dev
 <!-- CONTACT -->
 ## Contact
 
-Juan Cruz Lambrechts - juancruzlambrechts@gmail.com - [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jclambrechts/)
+Juan Cruz Lambrechts - juancruzlambrechts@gmail.com 
 
-Project Link: [https://github.com/CatBoxy/personal-portfolio](https://github.com/CatBoxy/personal-portfolio)
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jclambrechts/)
+
+Project Link: [https://personal-portfolio-catboxy.vercel.app/](https://personal-portfolio-catboxy.vercel.app/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
