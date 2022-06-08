@@ -10,7 +10,7 @@
   <h3 align="center">Juan Cruz Lambrechts's Portfolio</h3>
 
   <p align="center">
-    My personal portfolio showcasing my projects and blog!
+    My personal portfolio showcasing my blog and projects!
     <br />
     <a href="https://github.com/CatBoxy/personal-portfolio"><strong>Explore the docs »</strong></a>
   </p>
