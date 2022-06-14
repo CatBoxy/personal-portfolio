@@ -105,6 +105,8 @@ yarn dev
 - [x] Dark theme
 - [x] Add first blog post
 - [x] Add download CV button
+- [ ] New styles for card component
+- [ ] New styles for blog post component
 - [ ] Multi-language Support
     - [ ] English
 - [ ] Add custom components view
