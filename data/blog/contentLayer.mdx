@@ -52,6 +52,8 @@ npm install contentlayer next-contentlayer rehype-prism-plus reading-time
 Envolvemos el archivo next.config.js con withContentLayer. Deberia quedar asi:
 
 ```js
+// next.config.js
+
 /** @type {import('next').NextConfig} */
 const { withContentLayer } = require('next-contentlayer');
 
@@ -64,6 +66,8 @@ Si no existe, creamos ts.config.json o js.config.json en el root y agregamos las
 estamos diciendo a nuestra aplicación donde estan nuestros archivos generados por Contentlayer.
 
 ```js
+// js.config.json
+
 {
   "compilerOptions": {
     "baseUrl": ".",
@@ -80,6 +84,8 @@ que Contentlayer transforma en data consumible por nuestros componentes.
 Aca definimos el tipado de cada Documento, en este caso lo llamamos Post.
 
 ```js
+// contentlayer.config.js
+
 import {
   defineDocumentType,
   defineNestedType,
@@ -151,6 +157,8 @@ por Contentlayer desde la carpeta 'contentlayer/generated'. Utilizamos getStatic
 y pasarlo por props al componente Home.
 
 ```js
+// index.jsx
+
 import { allPosts } from 'contentlayer/generated';
 import { pick } from 'utils/pick';
 
@@ -211,10 +219,87 @@ export async function getStaticProps() {
 Creamos un archivo pick.js en carpeta utils.
 
 ```js
+// pick.js
+
 export const pick = (obj, keys) =>
   keys.reduce((acc, key) => {
     acc[key] = obj[key];
     return acc;
   }, {});
 ```
-Editamos
+Creamos archivos .mdx  en data/posts para poblar nuestro blog. La meta-data debe coincidir con el tipado
+que definimos en contentlayer.config.js.
+
+```js
+// mi-primer-post.mdx
+
+---
+title: Aurum perdideris incidit arbor et in pridem
+publishedAt: '2022-03-12'
+description: Sunt et ut cur Eryx etiamnunc. Duo ore crinita petis vulneribus opus Ophionides est umbra nobilis radicibus ferrugine virentem nec. .
+category: 'Lorem'
+author: { name: 'Hunter Becton', image: '/authors/hunter.jpeg' }
+image: 'https://i.imgur.com/4LdtsQs.jpg'
+---
+
+## Vellem tandem
+
+Lorem markdownum adplicor, et genusque Hectorea est ferri spectat, mensas.
+Clarium nomen sed magis moriens est deseruere stipes, molitor! Sunt et ut cur
+Eryx etiamnunc. Duo ore crinita petis vulneribus opus Ophionides est umbra
+nobilis radicibus ferrugine virentem nec. Conveniunt undis audire [ora
+solvit](http://www.agenorides-vix.org/non-hylaeusque), ad a tempore membraque.
+```
+
+Creamos archivo [slug].js para renderizar el contenido de cada post. Next.js utiliza esta convencion para nombrar archivos dinamicos.
+
+```js
+// pages/posts/[slug].js
+
+import { Layout } from '../../components/Layout';
+import Head from 'next/head';
+import Date from '../../components/Date';
+// Importamos todos los posts de contentlayer
+import { allPosts } from 'contentlayer/generated';
+// Este hook crea el componente MDXContent que renderiza el contenido de nuestro post
+import { useMDXComponent } from 'next-contentlayer/hooks';
+
+
+export default function Post({ post }) {
+  const MDXContent = useMDXComponent(post.body.code);
+
+  return (
+    <Layout>
+      <Head>
+        <title>{post.title}</title>
+      </Head>
+      <article>
+        <h1>{post.title}</h1>
+        <div>
+          <Date dateString={post.publishedAt} />
+        </div>
+        <div>
+          <MDXContent/>
+        </div>
+      </article>
+    </Layout>
+  );
+}
+
+// Le dice a Next.js que paths deben ser pre-generados en build-time. slug fue definido en contentlayer.config.js
+export async function getStaticPaths() {
+  return {
+    paths: allPosts.map((post) => ({
+      params: { slug: post.slug },
+    })),
+    fallback: false,
+  };
+}
+
+// Next le pasa a getStaticProps params, en este caso params.slug se corresponde con la ruta de este post
+export async function getStaticProps({ params }) {
+  const post = allPosts.find((post) => post.slug === params.slug);
+
+  return { props: { post } };
+}
+```
