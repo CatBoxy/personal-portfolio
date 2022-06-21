@@ -8,28 +8,27 @@ author: { name: 'Juan Cruz Lambrechts', image: '../../public/foto.jpg' }
 
 Armando mi página web, me topé con el problema de cómo
 debería manejar las entradas de mi blog. Debería usar un headless CMS?
-Busqué y di con muchas opciones pero nada me convenció. Hasta que encontré
-una herramienta interesante, contentlayer.
+Busqué y di con muchas opciones pero nada me convenció. Hasta que encontré Contentlayer.
 
-Leí la docu, vi un par de ejemplos y entendí que implementando contentlayer
+Leí la docu, vi un par de ejemplos y entendí que usando este SDK
 podría tener un buen manejo de mi archivos .mdx, de la forma que yo quisiera. Además,
 es fácil de integrar a Next.
 
 ## Qué es <ins>[Contentlayer](https://www.contentlayer.dev/)</ins>?
 
-Contentlayer es un SDK de contenido, simplifica trabajar con contenido estructurado
-como data en una aplicación. Transforma el contenido en data con formato JSON y genera
-definiciones de tipado de TypeScript.
+Contentlayer es un SDK que transforma el contenido de una app en archivos con formato JSON. Además,
+genera definiciones de tipado de Typescript.
 
-Todo el proceso corre como parte de Next.js dev server, lo que permite tener la data disponible
-para ser consumida una vez montada la app.
+En el caso de este blog el contenido es cada entrada alojada en su respectivo archivo .mdx. Cada uno de estos archivos es 
+transformado a JSON para luego poder consumir su data en cada componente. 
 
-Es un preprocesador de contenido que transforma e implementa tipado de TypeScript en el contenido, generando un archivo JSON.
+La transformación de los archivos ocurre del lado del lado del servidor, lo que permite tener los datos necesarios disponibles una vez inicializada
+la aplicación.
 
 ## Setup
 
-Esta es la configuracion basica que arme para manejar mis archivos .mdx y consumirlos desde mi blog.
-Al final de esta seccion dejo un repo con el codigo mostrado aca.
+Esta es la configuración básica que hice para manejar mis archivos .mdx y consumirlos desde mi blog.
+Siguiendo estos pasos podrás configurar Contentlayer para armar un blog simple. Repositorio al final.
 
 Primero creamos un nuevo proyecto de Next:
 
@@ -43,13 +42,13 @@ Entramos a la carpeta del proyecto:
 cd contentlayer-example
 ```
 
-Instalamos Contentlayer, el plugin de Next.js, <ins>[rehype-prism-plus](https://www.npmjs.com/package/rehype-prism-plus)</ins> y <ins>[reading-time](https://www.npmjs.com/package/reading-time)</ins> que seran utiles mas adelante:
+Instalamos Contentlayer, el plugin de Next.js, <ins>[rehype-prism-plus](https://www.npmjs.com/package/rehype-prism-plus)</ins> y <ins>[reading-time](https://www.npmjs.com/package/reading-time)</ins> que serán útiles mas adelante:
 
 ```js
 npm install contentlayer next-contentlayer rehype-prism-plus reading-time
 ```
 
-Envolvemos el archivo next.config.js con withContentLayer. Deberia quedar asi:
+Envolvemos el archivo next.config.js con withContentLayer. Debería quedar asi:
 
 ```js
 // next.config.js
@@ -62,8 +61,8 @@ module.exports = withContentLayer()({
 });
 ```
 
-Si no existe, creamos ts.config.json o js.config.json en el root y agregamos las siguientes lineas. De esta manera le
-estamos diciendo a nuestra aplicación donde estan nuestros archivos generados por Contentlayer.
+Si no existe, creamos ts.config.json o js.config.json en el root y agregamos las siguientes líneas. De esta manera le
+estamos diciendo a nuestra aplicación donde están nuestros archivos generados por Contentlayer.
 
 ```js
 // js.config.json
@@ -79,9 +78,9 @@ estamos diciendo a nuestra aplicación donde estan nuestros archivos generados p
 }
 ```
 
-Creamos el archivo contentlayer.config.js en el root. Cada Documento es una pieza individual de contenido
-que Contentlayer transforma en data consumible por nuestros componentes.
-Aca definimos el tipado de cada Documento, en este caso lo llamamos Post.
+Creamos el archivo contentlayer.config.js en el root. Contentlayer toma cada una de nuestras entradas del blog como una pieza individual
+de contenido, que luego transforma en data consumible por nuestros componentes. Acá definimos el tipado de cada entrada, que en este caso 
+llamamos Post.
 
 ```js
 // contentlayer.config.js
@@ -120,7 +119,7 @@ const Author = defineNestedType(() => ({
 
 const Post = defineDocumentType(() => ({
   name: 'Post',
-// Indicamos que nuestros archivos estaran en el path post/*.mdx
+// Indicamos que nuestros archivos estarán en el path posts/*.mdx
   filePathPattern: 'posts/*.mdx',
   contentType: 'mdx',
 //   Los fields vienen de cada archivo .mdx, en su meta data generada con frontmatter
@@ -143,7 +142,7 @@ const contentLayerConfig = makeSource({
 // Indicamos que nuestro contenido se aloja en la carpeta data
   contentDirPath: 'data',
   documentTypes: [Post],
-//   Configuracion de plugins
+//   Configuración de plugins
   mdx: {
     rehypePlugins: [rehypePrism],
   },
@@ -152,9 +151,35 @@ const contentLayerConfig = makeSource({
 export default contentLayerConfig;
 ```
 
-Mostramos nuestros Posts listados en index.jsx. Podemos importar todos nuestros Posts generados
-por Contentlayer desde la carpeta 'contentlayer/generated'. Utilizamos getStaticProps de Next para consumir allPosts
-y pasarlo por props al componente Home.
+Creamos archivos .mdx  en data/posts/ para poblar nuestro blog. La meta-data debe coincidir con el tipado
+que definimos en contentlayer.config.js. El siguiente archivo es un ejemplo de como debería verse un post en
+nuestro blog:
+
+```js
+// mi-primer-post.mdx
+
+// meta-data
+---
+title: Aurum perdideris incidit arbor et in pridem
+publishedAt: '2022-03-12'
+description: Sunt et ut cur Eryx etiamnunc. Duo ore crinita petis vulneribus opus Ophionides est umbra nobilis radicibus ferrugine virentem nec. .
+category: 'Lorem'
+author: { name: 'Hunter Becton', image: '/authors/hunter.jpeg' }
+image: 'https://i.imgur.com/4LdtsQs.jpg'
+---
+
+## Vellem tandem
+
+Lorem markdownum adplicor, et genusque Hectorea est ferri spectat, mensas.
+Clarium nomen sed magis moriens est deseruere stipes, molitor! Sunt et ut cur
+Eryx etiamnunc. Duo ore crinita petis vulneribus opus Ophionides est umbra
+nobilis radicibus ferrugine virentem nec. Conveniunt undis audire [ora
+solvit](http://www.agenorides-vix.org/non-hylaeusque), ad a tempore membraque.
+```
+
+Mostramos nuestros Posts listados en index.jsx. Nuestras entradas están disponibles como "allPosts", importadas
+desde la carpeta 'contentlayer/generated'. Utilizamos getStaticProps() de Next para consumir allPosts
+y pasarlo por props al componente Home. Es posible acceder a los componentes Layout y PostCard en el Repo compartido al final.
 
 ```js
 // index.jsx
@@ -163,7 +188,7 @@ import { allPosts } from 'contentlayer/generated';
 import { pick } from 'utils/pick';
 
 import { Layout } from '../components/Layout';
-import PostCard from '../components/PostCard';
+import { PostCard } from '../components/PostCard';
 
 export default function Home({ posts }) {
   return (
@@ -227,38 +252,16 @@ export const pick = (obj, keys) =>
     return acc;
   }, {});
 ```
-Creamos archivos .mdx  en data/posts para poblar nuestro blog. La meta-data debe coincidir con el tipado
-que definimos en contentlayer.config.js.
 
-```js
-// mi-primer-post.mdx
-
----
-title: Aurum perdideris incidit arbor et in pridem
-publishedAt: '2022-03-12'
-description: Sunt et ut cur Eryx etiamnunc. Duo ore crinita petis vulneribus opus Ophionides est umbra nobilis radicibus ferrugine virentem nec. .
-category: 'Lorem'
-author: { name: 'Hunter Becton', image: '/authors/hunter.jpeg' }
-image: 'https://i.imgur.com/4LdtsQs.jpg'
----
-
-## Vellem tandem
-
-Lorem markdownum adplicor, et genusque Hectorea est ferri spectat, mensas.
-Clarium nomen sed magis moriens est deseruere stipes, molitor! Sunt et ut cur
-Eryx etiamnunc. Duo ore crinita petis vulneribus opus Ophionides est umbra
-nobilis radicibus ferrugine virentem nec. Conveniunt undis audire [ora
-solvit](http://www.agenorides-vix.org/non-hylaeusque), ad a tempore membraque.
-```
-
-Creamos archivo [slug].js para renderizar el contenido de cada post. Next.js utiliza esta convencion para nombrar archivos dinamicos.
+Creamos archivo [slug].js para renderizar el contenido de cada post. Next.js utiliza esta convención para nombrar archivos 
+que se acceden por rutas dinámicas.
 
 ```js
 // pages/posts/[slug].js
 
 import { Layout } from '../../components/Layout';
 import Head from 'next/head';
-import Date from '../../components/Date';
+import { Date } from '../../components/Date';
 // Importamos todos los posts de contentlayer
 import { allPosts } from 'contentlayer/generated';
 // Este hook crea el componente MDXContent que renderiza el contenido de nuestro post
@@ -303,3 +306,5 @@ export async function getStaticProps({ params }) {
   return { props: { post } };
 }
 ```
+
+<ins>[Repositorio](https://github.com/CatBoxy/nextjs-contentlayer-boilerplate)</ins>
