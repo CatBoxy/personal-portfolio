@@ -1,0 +1,310 @@
+---
+title: Contentlayer + Next.js
+publishedAt: '21-06-2022'
+description: Qué es Contentlayer y como integrarlo a una app Next.js?
+category: 'Paso a paso'
+author: { name: 'Juan Cruz Lambrechts', image: '../../public/foto.jpg' }
+---
+
+Armando mi página web, me topé con el problema de cómo
+debería manejar las entradas de mi blog. Debería usar un headless CMS?
+Busqué y di con muchas opciones pero nada me convenció. Hasta que encontré Contentlayer.
+
+Leí la docu, vi un par de ejemplos y entendí que usando este SDK
+podría tener un buen manejo de mi archivos .mdx, de la forma que yo quisiera. Además,
+es fácil de integrar a Next.
+
+## Qué es <ins>[Contentlayer](https://www.contentlayer.dev/)</ins>?
+
+Contentlayer es un SDK que transforma el contenido de una app en archivos con formato JSON. Además,
+genera definiciones de tipado de Typescript.
+
+En el caso de este blog el contenido es cada entrada alojada en su respectivo archivo .mdx. Cada uno de estos archivos es 
+transformado a JSON para luego poder consumir su data en cada componente. 
+
+La transformación de los archivos ocurre del lado del lado del servidor, lo que permite tener los datos necesarios disponibles una vez inicializada
+la aplicación.
+
+## Setup
+
+Esta es la configuración básica que hice para manejar mis archivos .mdx y consumirlos desde mi blog.
+Siguiendo estos pasos podrás configurar Contentlayer para armar un blog simple. Repositorio al final.
+
+Primero creamos un nuevo proyecto de Next:
+
+```js
+npx create-next-app contentlayer-example
+```
+
+Entramos a la carpeta del proyecto:
+
+```js
+cd contentlayer-example
+```
+
+Instalamos Contentlayer, el plugin de Next.js, <ins>[rehype-prism-plus](https://www.npmjs.com/package/rehype-prism-plus)</ins> y <ins>[reading-time](https://www.npmjs.com/package/reading-time)</ins> que serán útiles mas adelante:
+
+```js
+npm install contentlayer next-contentlayer rehype-prism-plus reading-time
+```
+
+Envolvemos el archivo next.config.js con withContentLayer. Debería quedar asi:
+
+```js
+// next.config.js
+
+/** @type {import('next').NextConfig} */
+const { withContentLayer } = require('next-contentlayer');
+
+module.exports = withContentLayer()({
+  reactStrictMode: true,
+});
+```
+
+Si no existe, creamos ts.config.json o js.config.json en el root y agregamos las siguientes líneas. De esta manera le
+estamos diciendo a nuestra aplicación donde están nuestros archivos generados por Contentlayer.
+
+```js
+// js.config.json
+
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "contentlayer/generated": ["./.contentlayer/generated"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.tsx", "**/*.ts", ".contentlayer/generated"]
+}
+```
+
+Creamos el archivo contentlayer.config.js en el root. Contentlayer toma cada una de nuestras entradas del blog como una pieza individual
+de contenido, que luego transforma en data consumible por nuestros componentes. Acá definimos el tipado de cada entrada, que en este caso 
+llamamos Post.
+
+```js
+// contentlayer.config.js
+
+import {
+  defineDocumentType,
+  defineNestedType,
+  makeSource,
+} from 'contentlayer/source-files';
+
+import readingTime from 'reading-time';
+// Nos permite mostrar bloques de codigo y estilarlos con CSS
+import rehypePrism from 'rehype-prism-plus';
+
+const computedFields = {
+  readingTime: { type: 'json', resolve: (doc) => readingTime(doc.body.raw) },
+  wordCount: {
+    type: 'number',
+    resolve: (doc) => doc.body.raw.split(/\s+/gu).length,
+  },
+// Nos da el nombre del archivo como dato
+  slug: {
+    type: 'string',
+    resolve: (doc) => doc._raw.sourceFileName.replace(/\.mdx$/, ''),
+  },
+};
+
+// Definimos un nested type de Author 
+const Author = defineNestedType(() => ({
+  name: 'Author',
+  fields: {
+    name: { type: 'string', required: true },
+    image: { type: 'string', required: true },
+  },
+}));
+
+const Post = defineDocumentType(() => ({
+  name: 'Post',
+// Indicamos que nuestros archivos estarán en el path posts/*.mdx
+  filePathPattern: 'posts/*.mdx',
+  contentType: 'mdx',
+//   Los fields vienen de cada archivo .mdx, en su meta data generada con frontmatter
+  fields: {
+    title: { type: 'string', required: true },
+    publishedAt: { type: 'string', required: true },
+    description: { type: 'string', required: true },
+    category: { type: 'string', required: true },
+    author: {
+      type: 'nested',
+      of: Author,
+    },
+    image: { type: 'string', required: true },
+  },
+  computedFields,
+}));
+
+// 
+const contentLayerConfig = makeSource({
+// Indicamos que nuestro contenido se aloja en la carpeta data
+  contentDirPath: 'data',
+  documentTypes: [Post],
+//   Configuración de plugins
+  mdx: {
+    rehypePlugins: [rehypePrism],
+  },
+});
+
+export default contentLayerConfig;
+```
+
+Creamos archivos .mdx  en data/posts/ para poblar nuestro blog. La meta-data debe coincidir con el tipado
+que definimos en contentlayer.config.js. El siguiente archivo es un ejemplo de como debería verse un post en
+nuestro blog:
+
+```js
+// mi-primer-post.mdx
+
+// meta-data
+---
+title: Aurum perdideris incidit arbor et in pridem
+publishedAt: '2022-03-12'
+description: Sunt et ut cur Eryx etiamnunc. Duo ore crinita petis vulneribus opus Ophionides est umbra nobilis radicibus ferrugine virentem nec. .
+category: 'Lorem'
+author: { name: 'Hunter Becton', image: '/authors/hunter.jpeg' }
+image: 'https://i.imgur.com/4LdtsQs.jpg'
+---
+
+## Vellem tandem
+
+Lorem markdownum adplicor, et genusque Hectorea est ferri spectat, mensas.
+Clarium nomen sed magis moriens est deseruere stipes, molitor! Sunt et ut cur
+Eryx etiamnunc. Duo ore crinita petis vulneribus opus Ophionides est umbra
+nobilis radicibus ferrugine virentem nec. Conveniunt undis audire [ora
+solvit](http://www.agenorides-vix.org/non-hylaeusque), ad a tempore membraque.
+```
+
+Mostramos nuestros Posts listados en index.jsx. Nuestras entradas están disponibles como "allPosts", importadas
+desde la carpeta 'contentlayer/generated'. Utilizamos getStaticProps() de Next para consumir allPosts
+y pasarlo por props al componente Home. Es posible acceder a los componentes Layout y PostCard en el Repo compartido al final.
+
+```js
+// index.jsx
+
+import { allPosts } from 'contentlayer/generated';
+import { pick } from 'utils/pick';
+
+import { Layout } from '../components/Layout';
+import { PostCard } from '../components/PostCard';
+
+export default function Home({ posts }) {
+  return (
+    <>
+      <Layout>
+        <div className="row row-cols-1 row-cols-md-2 g-4">
+          {posts.map((post) => (
+              <div className="col" key={post.slug}>
+                <PostCard
+                  slug={post.slug}
+                  title={post.title}
+                  readingTime={post.readingTime}
+                  publishedAt={post.publishedAt}
+                  author={post.author}
+                  category={post.category}
+                  image={post.image}
+                  description={post.description}
+                />
+              </div>
+            )
+          )}
+        </div>
+      </Layout>
+    </>
+  );
+}
+
+export async function getStaticProps() {
+  const posts = allPosts
+    .map((post) =>
+// Utilizamos pick() para retornar de cada Post solo los valores que vamos a utilizar
+      pick(post, [
+        'slug',
+        'title',
+        'publishedAt',
+        'readingTime',
+        'author',
+        'category',
+        'description',
+        'image',
+      ])
+    )
+// Ordena el listado de Posts por orden cronologico
+    .sort(
+      (a, b) =>
+        Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
+    );
+
+  return { props: { posts } };
+}
+```
+
+Creamos un archivo pick.js en carpeta utils.
+
+```js
+// pick.js
+
+export const pick = (obj, keys) =>
+  keys.reduce((acc, key) => {
+    acc[key] = obj[key];
+    return acc;
+  }, {});
+```
+
+Creamos archivo [slug].js para renderizar el contenido de cada post. Next.js utiliza esta convención para nombrar archivos 
+que se acceden por rutas dinámicas.
+
+```js
+// pages/posts/[slug].js
+
+import { Layout } from '../../components/Layout';
+import Head from 'next/head';
+import { Date } from '../../components/Date';
+// Importamos todos los posts de contentlayer
+import { allPosts } from 'contentlayer/generated';
+// Este hook crea el componente MDXContent que renderiza el contenido de nuestro post
+import { useMDXComponent } from 'next-contentlayer/hooks';
+
+
+export default function Post({ post }) {
+  const MDXContent = useMDXComponent(post.body.code);
+
+  return (
+    <Layout>
+      <Head>
+        <title>{post.title}</title>
+      </Head>
+      <article>
+        <h1>{post.title}</h1>
+        <div>
+          <Date dateString={post.publishedAt} />
+        </div>
+        <div>
+          <MDXContent/>
+        </div>
+      </article>
+    </Layout>
+  );
+}
+
+// Le dice a Next.js que paths deben ser pre-generados en build-time. slug fue definido en contentlayer.config.js
+export async function getStaticPaths() {
+  return {
+    paths: allPosts.map((post) => ({
+      params: { slug: post.slug },
+    })),
+    fallback: false,
+  };
+}
+
+// Next le pasa a getStaticProps params, en este caso params.slug se corresponde con la ruta de este post
+export async function getStaticProps({ params }) {
+  const post = allPosts.find((post) => post.slug === params.slug);
+
+  return { props: { post } };
+}
+```
+
+<ins>[Repositorio](https://github.com/CatBoxy/nextjs-contentlayer-boilerplate)</ins>

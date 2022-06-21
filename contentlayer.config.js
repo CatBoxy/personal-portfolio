@@ -5,9 +5,9 @@ import {
 } from 'contentlayer/source-files';
 
 import readingTime from 'reading-time';
+import rehypeCodeTitles from 'rehype-code-titles';
 import rehypePrism from 'rehype-prism-plus';
 import remarkGfm from 'remark-gfm';
-import rehypeCodeTitles from 'rehype-code-titles';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 
@@ -55,8 +55,8 @@ const contentLayerConfig = makeSource({
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
       rehypeSlug,
-      rehypePrism,
       rehypeCodeTitles,
+      rehypePrism,
       [
         rehypeAutolinkHeadings,
         {
