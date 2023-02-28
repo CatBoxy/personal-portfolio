@@ -6,6 +6,7 @@ import botacuraImage from '../public/works/Botacura.jpg';
 import basementImage from '../public/works/basement1.png';
 import alkemyImage from '../public/works/Alkemy.jpg';
 import denverSanJuan from '../public/works/DenverSanJuan.jpg';
+import inakiLambrechts2 from '../public/works/inakilambrechts2.png';
 
 export default function works() {
   return (
@@ -23,11 +24,16 @@ export default function works() {
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4 w-full'>
               <Section>
-                <WorkItem image={denverSanJuan} title={'Denver San Juan'} slug={'denver-sanjuan'}>
-                Proyecto freelance para cliente local. Permite al cliente loguearse y actualizar datos.
+                <WorkItem image={inakiLambrechts2} title={'Inakilambrechts.com'} slug={'inaki-lambrechts'}>
+                  Portfolio personal desarrollado para mi hermano, enfocado en video y fotografia.
                 </WorkItem>
               </Section>
               <Section>
+                <WorkItem image={denverSanJuan} title={'Denver San Juan'} slug={'denver-sanjuan'}>
+                  Proyecto freelance para cliente local. Permite al cliente loguearse y actualizar datos.
+                </WorkItem>
+              </Section>
+              {/* <Section>
                 <WorkItem image={basementImage} title={'Basement Challenge'} slug={'basement-challenge'}>
                 Una marketplace UI que almacena el carrito de compras en local storage. Creado con React.js, chakra-ui y vite.
                 </WorkItem>
@@ -41,7 +47,7 @@ export default function works() {
                 <WorkItem image={botacuraImage} title={'Botacura - Digital House'} slug={'botacura'}>
                 App e-commerce de productos de escalada. Proyecto creado dentro del marco del curso Programación Web FullStack de Digital House.
                 </WorkItem>
-              </Section>
+              </Section> */}
             </div>
           </div>
         </div>
