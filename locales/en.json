@@ -1,3 +1,11 @@
 {
-    "hello": "Hello"
+    "index heading": "Full Stack Web Developer | Problem Solver | Materials Engineer",
+    "index description": "Dedicated to quality, delivering awesome work.",
+    "about me": "About me",
+    "description": "👋 Hello, I'm Juan Cruz Lambrechts, a Full Stack Web Developer based in San Juan, Argentina, committed to delivering high-quality solutions in the software development realm. Proficient in Vue.js, Nuxt.js and React.js, with expertise in unit testing, and data processing. Skilled in languages like Scala, Python, and JavaScript, and experienced in Git, MySQL, Docker, and web scraping. Excited about contributing to cutting-edge projects, I am on a continuous journey to grow as a developer, embracing challenges with enthusiasm and a commitment to excellence.",
+    "my portfolio": "My portfolio",
+    "my cv": "My CV",
+    "me": "I",
+    "Front End development, UI design, React.js, Vue.js, Python, Web Scraping.": "Front End development, UI design, React.js, Vue.js, Python, Web Scraping.",
+    "In the web": "In the web"
 }

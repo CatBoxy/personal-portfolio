@@ -21,10 +21,10 @@ export default function Home() {
                 Juan Lambrechts
               </h1>
               <h2 className="text-gray-700 dark:text-gray-200 mb-4">
-                Desarrollador Full-Stack | Ingeniero en Materiales
+                {t["index heading"]}
               </h2>
               <p className="text-gray-600 dark:text-gray-400 mb-16">
-                Creando y aprendiendo cosas nuevas.
+                {t["index description"]}
               </p>
             </div>
             <div className="w-[120px] h-[120px] sm:w-[120px] relative mb-8 sm:mb-0 ">
@@ -33,40 +33,37 @@ export default function Home() {
           </div>
           <Section delay={0.1}>
             <h3 className='mb-6 font-bold text-2xl md:text-3xl text-black dark:text-white mb-1 tracking-tight decoration-4 dark:decoration-gray-400 decoration-gray-600 underline underline-offset-[6px]'>
-              Sobre mi
+              {t["about me"]}
             </h3>
             <p className='mb-6 text-justify text-gray-600 dark:text-gray-400 '>
-              Soy un desarrollador web Full-stack, constantemente aprendiendo cosas nuevas (Event-Sourcing, DDD, Next.js).
-              Vivo en San Juan, Argentina y me apasiona elaborar soluciones y servicios digitales.
-              Me interesa entender cada parte de todo proyecto en el que me enfoco, y compartir lo aprendido a través de
-              blog posts.
+              {t["description"]}
             </p>
             <div className="flex flex-row justify-evenly w-full items-center mb-6 sm:mb-0">
               <Link href="/works" passHref>
                 <button className="px-4 py-2 dark:bg-gray-600 bg-gray-200 rounded-lg hover:ring-2 ring-gray-300 transition-all">
                   <a className="flex flex-row items-center font-semibold">
-                    Mi Portfolio {<FaAngleRight className="ml-1" />}
+                    {t["my portfolio"]} {<FaAngleRight className="ml-1" />}
                   </a>
                 </button>
               </Link>
               <a target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1gR1kg6vcAj68_f7PvIKamX22erip8Pbz/view?usp=sharing" >
                 <button className="flex items-center font-semibold px-4 py-2 dark:bg-gray-600 bg-gray-200 rounded-lg hover:ring-2 ring-gray-300 transition-all">
-                  <p>Mi CV</p> {<HiDownload className="ml-1" />}
+                  <p>{t["my cv"]}</p> {<HiDownload className="ml-1" />}
                 </button>
               </a>
             </div>
           </Section>
           <Section delay={0.2}>
             <h3 className='mb-6 font-bold text-2xl md:text-3xl text-black dark:text-white mb-1 tracking-tight decoration-4 dark:decoration-gray-400 decoration-gray-600 underline underline-offset-[6px]'>
-              Yo ♥
+              {t["me"]} ♥
             </h3>
             <p className='mb-6 text-justify text-gray-600 dark:text-gray-400 '>
-              Leer, Música, Ingeniería, Web3, DDD, Event-Sourcing, desarrollo front-end.
+              {t["Front End development, UI design, React.js, Vue.js, Python, Web Scraping."]}
             </p>
           </Section>
           <Section delay={0.3}>
             <h3 className='mb-6 font-bold text-2xl md:text-3xl text-black dark:text-white mb-1 tracking-tight decoration-4 dark:decoration-gray-400 decoration-gray-600 underline underline-offset-[6px]'>
-              En la Web
+              {t["In the web"]}
             </h3>
             <ul className='flex flex-col items-start'>
               <li>
