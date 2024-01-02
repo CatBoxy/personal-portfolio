@@ -1,14 +1,16 @@
-import { Layout } from '../components/layout';
 import Image from 'next/image';
 import Link from 'next/link';
 import { BsGithub, BsLinkedin, BsTwitter } from 'react-icons/bs';
 import { FaAngleRight } from 'react-icons/fa';
 import { HiDownload, HiMail } from 'react-icons/hi';
+import { Layout } from '../components/layout';
 import Section from '../components/section';
-import avatar from '../public/foto.jpg';
+import useTranslation from '../hooks/useTranslation';
+import Avatar from '../public/foto.jpg';
 
 
 export default function Home() {
+  const t = useTranslation();
   return (
     <>
       <Layout>
@@ -26,7 +28,7 @@ export default function Home() {
               </p>
             </div>
             <div className="w-[120px] h-[120px] sm:w-[120px] relative mb-8 sm:mb-0 ">
-              <Image src={avatar} alt='Juan Lambrechts' layout='fill' objectFit='cover' className="rounded-full -z-50" />
+              <Image src={Avatar} alt='Juan Lambrechts' layout='fill' objectFit='cover' className="rounded-full -z-50" />
             </div>
           </div>
           <Section delay={0.1}>
