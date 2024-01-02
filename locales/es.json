@@ -1,11 +1,14 @@
 {
-    "index heading": "Desarrollador Web Full-Stack | Ingeniero en Materiales",
-    "index description": "Comprometido con la calidad y buen diseño.",
     "about me": "Sobre mi",
+    "Blog": "Blog",
     "description": "👋 Hola, soy Juan Cruz Lambrechts, un Desarrollador Web Full Stack localizado en San Juan, Argentina, comprometido a ofrecer soluciones de alta calidad en el ámbito del desarrollo de software. Entre mis habilidades destacan Vue.js, Nuxt.js y React.js, pruebas unitarias y procesamiento de datos. Competente en lenguajes como Scala, Python y JavaScript, y con experiencia en Git, MySQL, Docker y web scraping. Estoy en crecimiento continuo como desarrollador y emocionado por contribuir a proyectos innovadores.",
-    "my portfolio": "Mi portfolio",
-    "my cv": "Mi CV",
-    "me": "Yo",
     "Front End development, UI design, React.js, Vue.js, Python, Web Scraping.": "Desarrollo Front End, diseño UI, React.js, Vue.js, Python, Web Scraping.",
-    "In the web": "En la web"
+    "Home": "Inicio",
+    "In the web": "En la web",
+    "index description": "Comprometido con la calidad y buen diseño.",
+    "index heading": "Desarrollador Web Full-Stack | Ingeniero en Materiales",
+    "me": "Yo",
+    "my cv": "Mi CV",
+    "my portfolio": "Mi portfolio",
+    "Projects": "Proyectos"
 }
