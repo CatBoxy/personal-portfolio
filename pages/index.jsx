@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { BsGithub, BsLinkedin, BsTwitter } from 'react-icons/bs';
 import { FaAngleRight } from 'react-icons/fa';
 import { HiDownload, HiMail } from 'react-icons/hi';
+
 import { Layout } from '../components/layout';
 import Section from '../components/section';
 import useTranslation from '../hooks/useTranslation';
@@ -58,7 +59,7 @@ export default function Home() {
               {t["me"]} ♥
             </h3>
             <p className='mb-6 text-justify text-gray-600 dark:text-gray-400 '>
-              {t["Front End development, UI design, React.js, Vue.js, Python, Web Scraping."]}
+              {t["Front End development, UI design, React.js, Vue.js, Python, Web Scraping, DDD."]}
             </p>
           </Section>
           <Section delay={0.3}>
