@@ -107,8 +107,8 @@ yarn dev
 - [x] Add download CV button
 - [ ] New styles for card component
 - [ ] New styles for blog post component
-- [ ] Multi-language Support
-    - [ ] English
+- [x] Multi-language Support
+    - [x] English
 - [ ] Add custom components view
 - [ ] SEO optimization
 
