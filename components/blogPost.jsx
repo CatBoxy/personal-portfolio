@@ -1,6 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 
+import useTranslation from '../hooks/useTranslation';
+
 export default function BlogPost({
   title,
   slug,
@@ -8,7 +10,9 @@ export default function BlogPost({
   // publishedAt,
   readingTime,
   description,
+  language
 }) {
+  const t = useTranslation();
   return (
     <>
       <Link href={`/blog/${slug}`}>
@@ -19,10 +23,10 @@ export default function BlogPost({
                 {title}
               </h4>
               <p className="w-36 mb-4 text-left text-gray-500 md:text-right md:mb-0">
-                {`${Math.round(readingTime.minutes)} min de lectura`}
+                {`${Math.round(readingTime.minutes)} ${t["min read time"]}`}
               </p>
             </div>
-            <p>{category}</p>
+            <p>{category} - {t[language]}</p>
             <p className="text-gray-600 dark:text-gray-400">{description}</p>
           </div>
         </a>
