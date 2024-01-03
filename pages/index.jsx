@@ -47,7 +47,7 @@ export default function Home() {
                   </a>
                 </button>
               </Link>
-              <a target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1gR1kg6vcAj68_f7PvIKamX22erip8Pbz/view?usp=sharing" >
+              <a target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1VcM2TSIvlXd9L7RY6R7XK6ln8uzzd2Vn/view?usp=sharing" >
                 <button className="flex items-center font-semibold px-4 py-2 dark:bg-gray-600 bg-gray-200 rounded-lg hover:ring-2 ring-gray-300 transition-all">
                   <p>{t["my cv"]}</p> {<HiDownload className="ml-1" />}
                 </button>
