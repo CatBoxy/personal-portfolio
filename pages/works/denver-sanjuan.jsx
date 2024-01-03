@@ -1,10 +1,12 @@
-import React from 'react';
-import { Layout } from '../../components/layout';
 import Image from 'next/image';
+import React from 'react';
+
+import { Layout } from '../../components/layout';
 import denverSanJuan from '../../public/works/DenverSanJuan.jpg';
+import useTranslation from '../../hooks/useTranslation';
 
-export default function AlkemyChallenge() {
-
+export default function DenverSanJuan() {
+  const t = useTranslation();
   return (
     <>
       <Layout>
@@ -15,19 +17,16 @@ export default function AlkemyChallenge() {
                 Denver San Juan
               </h1>
               <p className="text-gray-600 dark:text-gray-400 mb-8">
-                Abril 2022
+                {t["April"]} 2022
               </p>
             </div>
             <p className="text-justify mb-8 text-gray-600 dark:text-gray-400">
-              Proyecto freelance para un cliente local. Consiste en una interfaz que muestra precios de compra y venta
-              de varias divisas y la hora en que fueron actualizados los datos. Posee un login para el cliente, el cual redirecciona
-              a un dashboard de administrador, donde es posible cambiar los datos. La autenticación de usuario y base de datos son manejados con Firebase.
-              Deploy en Vercel.
+              {t["denver description"]}
             </p>
             <ul className="mt-8 mb-8 px-4 w-full">
               <li className="mb-2">
                 <div className="font-bold dark:bg-gray-600 bg-gray-200 inline-block px-1 rounded-sm mr-2">
-                  <p>PAGINA WEB</p>
+                  <p>{t["WEB SITE"]}</p>
                 </div>
                 <a href="https://denversanjuan.com/" target="_blank" rel="noreferrer" className='text-gray-600 dark:text-gray-400'>
                   https://denversanjuan.com/
@@ -37,7 +36,7 @@ export default function AlkemyChallenge() {
                 <span className="font-bold dark:bg-gray-600 bg-gray-200 inline-block px-1 rounded-sm mr-2">
                   STACK
                 </span>
-                <p className="inline-block text-gray-600 dark:text-gray-400"> ReactJS, CSS, Firebase, Vite, React-router</p>
+                <p className="inline-block text-gray-600 dark:text-gray-400"> React.js, CSS, Firebase, Vite, React-router, Vercel</p>
               </li>
             </ul>
             <div className='w-full flex flex-col items-center'>

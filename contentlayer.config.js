@@ -44,6 +44,7 @@ const Post = defineDocumentType(() => ({
       type: 'nested',
       of: Author,
     },
+    language: { type: 'string', required: true }
   },
   computedFields,
 }));

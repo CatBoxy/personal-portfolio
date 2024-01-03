@@ -1,12 +1,15 @@
-import React from 'react';
-import { Layout } from '../components/layout';
 import { allPosts } from 'contentlayer/generated';
+import React from 'react';
+
 import { pick } from 'utils/pick';
 import BlogPost from '../components/blogPost';
+import { Layout } from '../components/layout';
 import Section from '../components/section';
+import useTranslation from '../hooks/useTranslation';
 
 
 export default function blog({ posts }) {
+  const t = useTranslation();
   return (
     <>
       <Layout>
@@ -17,8 +20,7 @@ export default function blog({ posts }) {
                 Blog
               </h1>
               <p className="text-gray-600 dark:text-gray-400 mb-16">
-                Bienvenido/a a mi blog. En este espacio comparto aprendizajes, experiencias y cosas interesantes
-                que encuentro.
+                {t["Welcome to my blog. Feel free to browse through my learnings, experiences and random interesting stuff."]}
               </p>
             </div>
             <div className='flex flex-col w-full'>
@@ -31,6 +33,7 @@ export default function blog({ posts }) {
                   author,
                   category,
                   description,
+                  language
                 }) => (
                   <Section key={slug}>
                     <BlogPost
@@ -41,6 +44,7 @@ export default function blog({ posts }) {
                       author={author}
                       category={category}
                       description={description}
+                      language={language}
                     />
                   </Section>
                 )
@@ -64,6 +68,7 @@ export async function getStaticProps() {
         'author',
         'category',
         'description',
+        'language'
       ])
     )
     .sort(
