@@ -1,9 +1,11 @@
 import React from 'react';
 import { BsGithub } from 'react-icons/bs';
+
 import useTranslation from '../hooks/useTranslation';
 import HiddenMenu from './hiddenMenu';
 import NavItem from './navItem';
 import ThemeButton from './themeButton';
+import LanguageSwitchButton from './languageSwitchButton';
 
 export default function Nav() {
   const t = useTranslation();
@@ -23,6 +25,7 @@ export default function Nav() {
             </button>
           </a>
           <ThemeButton/>
+          <LanguageSwitchButton/>
         </div>
       </nav>
     </>
