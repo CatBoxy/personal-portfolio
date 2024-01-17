@@ -4,13 +4,13 @@ import { Layout } from '../components/layout';
 import Section from '../components/section';
 import WorkItem from '../components/workItem';
 import useTranslation from '../hooks/useTranslation';
-import alkemyImage from '../public/works/Alkemy.jpg';
-import botacuraImage from '../public/works/Botacura.jpg';
-import denverSanJuan from '../public/works/DenverSanJuan.jpg';
-import basementImage from '../public/works/basement1.png';
-import inakiLambrechts2 from '../public/works/inakilambrechts2.png';
+import alkemyImage from '../public/projects/Alkemy.jpg';
+import botacuraImage from '../public/projects/Botacura.jpg';
+import denverSanJuan from '../public/projects/DenverSanJuan.jpg';
+import basementImage from '../public/projects/basement1.png';
+import inakiLambrechts2 from '../public/projects/inakilambrechts2.png';
 
-export default function works() {
+export default function projects() {
   const t = useTranslation();
   return (
     <>
@@ -18,22 +18,38 @@ export default function works() {
         <div className="flex flex-col justify-center items-start w-full max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
           <div className="flex flex-col items-start w-full justify-between">
             <div className="flex flex-col pr-8">
-              <h1 className='font-bold text-3xl md:text-5xl text-black dark:text-white mb-1 tracking-tight'>
-                {t["Projects"]}
+              <h1 className="font-bold text-3xl md:text-5xl text-black dark:text-white mb-1 tracking-tight">
+                {t['Projects']}
               </h1>
               <p className="text-gray-600 dark:text-gray-400 mb-16">
-                {t["In this space I share my projects."]}
+                {t['In this space I share my projects.']}
               </p>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-4 w-full'>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
               <Section>
-                <WorkItem image={inakiLambrechts2} title={'Inakilambrechts.com'} slug={'inaki-lambrechts'}>
-                  {t["Personal portfolio developed for Iñaki Lambrechts, film director and photographer."]}
+                <WorkItem
+                  image={inakiLambrechts2}
+                  title={'Inakilambrechts.com'}
+                  slug={'inaki-lambrechts'}
+                >
+                  {
+                    t[
+                      'Personal portfolio developed for Iñaki Lambrechts, film director and photographer.'
+                    ]
+                  }
                 </WorkItem>
               </Section>
               <Section>
-                <WorkItem image={denverSanJuan} title={'Denver San Juan'} slug={'denver-sanjuan'}>
-                  {t["Freelance project for local client. Lets the user log in and update currency values manually."]}
+                <WorkItem
+                  image={denverSanJuan}
+                  title={'Denver San Juan'}
+                  slug={'denver-sanjuan'}
+                >
+                  {
+                    t[
+                      'Freelance project for local client. Lets the user log in and update currency values manually.'
+                    ]
+                  }
                 </WorkItem>
               </Section>
               {/* <Section>
