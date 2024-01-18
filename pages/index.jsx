@@ -45,7 +45,7 @@ export default function Home() {
               {t['description']}
             </p>
             <div className="flex flex-row justify-evenly w-full items-center mb-6 sm:mb-0">
-              <Link href="/works" passHref>
+              <Link href="/projects" passHref>
                 <button className="px-4 py-2 dark:bg-gray-600 bg-gray-200 rounded-lg hover:ring-2 ring-gray-300 transition-all">
                   <a className="flex flex-row items-center font-semibold">
                     {t['my portfolio']} {<FaAngleRight className="ml-1" />}
