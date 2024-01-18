@@ -11,8 +11,8 @@ import {
   SiFastapi,
   SiSanity,
   SiFirebase,
+  SiNuxtdotjs,
 } from 'react-icons/si';
-import { TbBrandNuxt } from 'react-icons/tb';
 import { FaVuejs } from 'react-icons/fa';
 import { GrMysql } from 'react-icons/gr';
 
@@ -21,7 +21,7 @@ export const iconDict = {
   typescript: <SiTypescript />,
   reactjs: <SiReact />,
   nextjs: <SiNextdotjs />,
-  nuxtjs: <TbBrandNuxt />,
+  nuxtjs: <SiNuxtdotjs />,
   vuejs: <FaVuejs />,
   scala: <SiScala />,
   materialdesign: <SiMaterialdesign />,
