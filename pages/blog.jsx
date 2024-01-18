@@ -7,8 +7,7 @@ import { Layout } from '../components/layout';
 import Section from '../components/section';
 import useTranslation from '../hooks/useTranslation';
 
-
-export default function blog({ posts }) {
+export default function Blog({ posts }) {
   const t = useTranslation();
   return (
     <>
@@ -16,14 +15,18 @@ export default function blog({ posts }) {
         <div className="flex flex-col justify-center items-start w-full max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
           <div className="flex flex-col items-start w-full justify-between">
             <div className="flex flex-col pr-8">
-              <h1 className='font-bold text-3xl md:text-5xl text-black dark:text-white mb-1 tracking-tight'>
+              <h1 className="font-bold text-3xl md:text-5xl text-black dark:text-white mb-1 tracking-tight">
                 Blog
               </h1>
               <p className="text-gray-600 dark:text-gray-400 mb-16">
-                {t["Welcome to my blog. Feel free to browse through my learnings, experiences and random interesting stuff."]}
+                {
+                  t[
+                    'Welcome to my blog. Feel free to browse through my learnings, experiences and random interesting stuff.'
+                  ]
+                }
               </p>
             </div>
-            <div className='flex flex-col w-full'>
+            <div className="flex flex-col w-full">
               {posts.map(
                 ({
                   slug,
@@ -33,7 +36,7 @@ export default function blog({ posts }) {
                   author,
                   category,
                   description,
-                  language
+                  language,
                 }) => (
                   <Section key={slug}>
                     <BlogPost
@@ -68,7 +71,7 @@ export async function getStaticProps() {
         'author',
         'category',
         'description',
-        'language'
+        'language',
       ])
     )
     .sort(

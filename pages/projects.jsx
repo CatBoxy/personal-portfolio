@@ -7,7 +7,7 @@ import useTranslation from '../hooks/useTranslation';
 import denverSanJuan from '../public/projects/DenverSanJuan.jpg';
 import inakiLambrechts2 from '../public/projects/inakilambrechts2.png';
 
-export default function projects() {
+export default function Projects() {
   const t = useTranslation();
   return (
     <>

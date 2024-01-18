@@ -6,7 +6,7 @@ import useTranslation from '../hooks/useTranslation';
 import useGlowPointer from '../hooks/useGlowPointer';
 import { iconDict } from '../utils/iconDict';
 
-export default function work({ data }) {
+export default function Work({ data }) {
   const t = useTranslation();
   const setGlow = useGlowPointer();
 
