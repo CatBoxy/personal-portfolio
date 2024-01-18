@@ -6,7 +6,6 @@ import React from 'react';
 import useTranslation from '../hooks/useTranslation';
 import BurgerIcon from './burgerIcon';
 
-
 export default function HiddenMenu() {
   const t = useTranslation();
   return (
@@ -31,21 +30,28 @@ export default function HiddenMenu() {
               <Menu.Item>
                 {({ active }) => (
                   <MyLink href="/" active={active}>
-                    {t["Home"]}
+                    {t['Home']}
                   </MyLink>
                 )}
               </Menu.Item>
               <Menu.Item>
                 {({ active }) => (
-                  <MyLink href="/works" active={active}>
-                    {t["Projects"]}
+                  <MyLink href="/projects" active={active}>
+                    {t['Projects']}
+                  </MyLink>
+                )}
+              </Menu.Item>
+              <Menu.Item>
+                {({ active }) => (
+                  <MyLink href="/work" active={active}>
+                    {t['Work']}
                   </MyLink>
                 )}
               </Menu.Item>
               <Menu.Item>
                 {({ active }) => (
                   <MyLink href="/blog" active={active}>
-                    {t["Blog"]}
+                    {t['Blog']}
                   </MyLink>
                 )}
               </Menu.Item>
@@ -63,11 +69,16 @@ function MyLink(props) {
   const { href, children, active, ...rest } = props;
   return (
     <Link href={href} passHref>
-      <button className='flex flex-col w-full'>
-        <a className={cn(
-          active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-          'text-gray-800 dark:text-gray-200 block px-4 py-2 text-sm'
-        )} {...rest}>{children}</a>
+      <button className="flex flex-col w-full">
+        <a
+          className={cn(
+            active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+            'text-gray-800 dark:text-gray-200 block px-4 py-2 text-sm'
+          )}
+          {...rest}
+        >
+          {children}
+        </a>
       </button>
     </Link>
   );

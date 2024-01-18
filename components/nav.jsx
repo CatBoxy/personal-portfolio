@@ -16,6 +16,7 @@ export default function Nav() {
           <HiddenMenu />
           <NavItem href="/" text={t['Home']} className="pl-0" />
           <NavItem href="/projects" text={t['Projects']} />
+          <NavItem href="/work" text={t['Work']} />
           <NavItem href="/blog" text={t['Blog']} />
         </div>
         <div className="flex flex-row items-center">

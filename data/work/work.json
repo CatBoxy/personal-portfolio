@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "spread": 200,
+    "base": 200,
+    "outer": 1,
+    "company": "Torre.ai",
+    "title": "Delivered several key features, fixed bugs, and enhanced UI, contributing to Torre.ai's successful transition to beta stage.",
+    "start": "April 2023",
+    "end": "December 2023",
+    "techStack": [
+      "typescript",
+      "scala",
+      "vuejs",
+      "nuxtjs",
+      "materialdesign",
+      "python",
+      "mysql",
+      "docker"
+    ]
+  },
+  {
+    "id": 2,
+    "spread": 200,
+    "base": 220,
+    "outer": 1,
+    "company": "Aquicobro.com",
+    "title": "Developed a fraud and money laundering detection system + empowered small entrepreneurs by crafting engaging e-commerce websites, seamlessly integrated with Aquicobro payment systems.",
+    "start": "July 2022",
+    "end": "April 2023",
+    "techStack": ["javascript", "python", "flask", "fastApi", "mysql", "docker"]
+  },
+  {
+    "id": 3,
+    "spread": 200,
+    "base": 250,
+    "outer": 1,
+    "company": "Freelance",
+    "title": "Crafted engaging personal portfolios and small business websites.",
+    "start": "February 2021",
+    "end": "July 2022",
+    "techStack": ["javascript", "reactjs", "nextjs", "sanity", "firebase"]
+  }
+]
