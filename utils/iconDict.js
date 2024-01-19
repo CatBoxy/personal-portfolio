@@ -12,6 +12,10 @@ import {
   SiSanity,
   SiFirebase,
   SiNuxtdotjs,
+  SiStyledcomponents,
+  SiVercel,
+  SiVite,
+  SiReactrouter,
 } from 'react-icons/si';
 import { FaVuejs } from 'react-icons/fa';
 import { GrMysql } from 'react-icons/gr';
@@ -32,4 +36,8 @@ export const iconDict = {
   fastapi: <SiFastapi />,
   sanity: <SiSanity />,
   firebase: <SiFirebase />,
+  styledcomponents: <SiStyledcomponents />,
+  vercel: <SiVercel />,
+  vite: <SiVite />,
+  reactrouter: <SiReactrouter />,
 };

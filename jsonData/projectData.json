@@ -1,0 +1,40 @@
+[
+  {
+    "id": 1,
+    "spread": 200,
+    "base": 200,
+    "outer": 1,
+    "company": "Inakilambrechts.com",
+    "title": "Personal portfolio developed for Iñaki Lambrechts, film director and photographer.",
+    "start": "August 2022",
+    "end": "August 2022",
+    "slug": "inaki-lambrechts",
+    "techStack": [
+      "javascript",
+      "reactjs",
+      "styledcomponents",
+      "nextjs",
+      "sanity",
+      "vercel"
+    ]
+  },
+  {
+    "id": 2,
+    "spread": 200,
+    "base": 220,
+    "outer": 1,
+    "company": "Denver San Juan",
+    "title": "Freelance project for local client. Lets the user log in and update currency values manually.",
+    "start": "April 2022",
+    "end": "April 2022",
+    "slug": "denver-sanjuan",
+    "techStack": [
+      "javascript",
+      "reactjs",
+      "firebase",
+      "vite",
+      "reactrouter",
+      "vercel"
+    ]
+  }
+]

@@ -39,9 +39,9 @@ export default function Work({ data }) {
                         >
                           {card.outer ? <div data-glow></div> : null}
                           <div className="card__content">
-                            <div className="flex flex-row justify-between mb-4 leading-4">
+                            <div className="flex flex-col sm:flex-row justify-between mb-4 leading-4">
                               <h1 className="font-semibold">{card.company}</h1>
-                              <span className="text-gray-600 dark:text-gray-400">
+                              <span className="text-gray-600 dark:text-gray-400 mt-4 sm:mt-0">
                                 {t[card.start]} - {t[card.end]}
                               </span>
                             </div>
