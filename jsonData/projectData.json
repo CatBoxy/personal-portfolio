@@ -4,6 +4,26 @@
     "spread": 200,
     "base": 200,
     "outer": 1,
+    "company": "Cawments",
+    "title": "Twitter like website to create text + image posts and comments.",
+    "start": "July 2024",
+    "end": "July 2024",
+    "slug": "cawments",
+    "techStack": [
+      "typescript",
+      "reactjs",
+      "supabase",
+      "nextjs",
+      "tailwind",
+      "shadcn",
+      "vercel"
+    ]
+  },
+  {
+    "id": 2,
+    "spread": 200,
+    "base": 220,
+    "outer": 1,
     "company": "Inakilambrechts.com",
     "title": "Personal portfolio developed for Iñaki Lambrechts, film director and photographer.",
     "start": "August 2022",
@@ -19,9 +39,9 @@
     ]
   },
   {
-    "id": 2,
+    "id": 3,
     "spread": 200,
-    "base": 220,
+    "base": 240,
     "outer": 1,
     "company": "Denver San Juan",
     "title": "Freelance project for local client. Lets the user log in and update currency values manually.",

@@ -16,9 +16,12 @@ import {
   SiVercel,
   SiVite,
   SiReactrouter,
+  SiTailwindcss,
+  SiShadcnui,
 } from 'react-icons/si';
 import { FaVuejs } from 'react-icons/fa';
 import { GrMysql } from 'react-icons/gr';
+import { RiSupabaseFill } from 'react-icons/ri';
 
 export const iconDict = {
   javascript: <SiJavascript />,
@@ -40,4 +43,7 @@ export const iconDict = {
   vercel: <SiVercel />,
   vite: <SiVite />,
   reactrouter: <SiReactrouter />,
+  supabase: <RiSupabaseFill />,
+  tailwind: <SiTailwindcss />,
+  shadcn: <SiShadcnui />,
 };
