@@ -41,3 +41,7 @@ yarn-error.log*
 .env
 
 .vscode
+
+.prettierrc.js
+
+.eslintrc.json
